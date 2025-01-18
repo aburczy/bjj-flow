@@ -66,7 +66,7 @@ const Progress: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Chart Doughnut */}
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
           <h2 className="text-xl font-bold text-primary mb-4">
             Techniques Progress
           </h2>

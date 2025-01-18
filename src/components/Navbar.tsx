@@ -36,6 +36,13 @@ const Navbar: React.FC = () => {
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-light transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
+              to="/dojo-map"
+              className="group relative hover:text-secondary transition"
+            >
+              Dojo Map
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-light transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link
               to="/about"
               className="group relative hover:text-light transition"
             >
