@@ -11,7 +11,7 @@ module.exports = {
         light: "#FFFFFF",
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"], // Définir Poppins comme police principale
+        sans: ["Poppins", "sans-serif"],
       },
     },
   },
