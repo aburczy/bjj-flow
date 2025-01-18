@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import TechniquesLibrary from "./pages/TechniquesLibrary";
+import Progress from "./pages/Progress";
 
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/progress" element={<Progress />} />
         <Route path="/techniques" element={<TechniquesLibrary />} />
         <Route path="/about" element={<About />} />
       </Routes>
