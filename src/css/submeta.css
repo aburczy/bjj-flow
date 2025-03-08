@@ -1,0 +1,2804 @@
+@font-face {
+  font-family: Px Grotesk;
+  src: url(/fonts/px-grotesk-regular.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Px Grotesk;
+  src: url(/fonts/px-grotesk-bold.woff) format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  --dark-surface-base: var(--prata-10);
+  --dark-surface-low: var(--prata-2);
+  --dark-surface-high: var(--prata-15);
+  --dark-surface-invert: var(--prata-99);
+  --dark-base-primary-default: var(--prata-95);
+  --dark-base-primary-hover: var(--prata-80);
+  --dark-base-primary-active: var(--prata-70);
+  --dark-base-primary-disabled: var(--prata-55);
+  --dark-base-secondary-default: var(--prata-78);
+  --dark-base-secondary-hover: var(--prata-95);
+  --dark-base-secondary-active: var(--prata-80);
+  --dark-base-secondary-disabled: var(--prata-55);
+  --dark-base-tertiary-default: var(--prata-70);
+  --dark-base-tertiary-hover: var(--prata-95);
+  --dark-base-tertiary-active: var(--prata-80);
+  --dark-base-tertiary-disabled: var(--prata-55);
+  --dark-base-highlight-default: var(--arara-80);
+  --dark-base-highlight-hover: var(--arara-60);
+  --dark-base-highlight-active: var(--arara-45);
+  --dark-base-highlight-disabled: var(--arara-60);
+  --dark-base-accent-default: var(--prata-15);
+  --dark-base-accent-hover: var(--prata-25);
+  --dark-base-accent-active: var(--prata-30);
+  --dark-base-accent-disabled: var(--prata-20);
+  --dark-base-accent-highlight-default: var(--arara-20);
+  --dark-base-accent-highlight-hover: var(--arara-30);
+  --dark-base-accent-highlight-active: var(--arara-40);
+  --dark-base-accent-highlight-disabled: var(--arara-20);
+  --dark-base-error-default: var(--hot-60);
+  --dark-base-error-hover: var(--hot-60);
+  --dark-base-error-active: var(--hot-60);
+  --dark-base-error-disabled: var(--hot-60);
+  --dark-base-border-primary-default: var(--prata-50);
+  --dark-base-border-primary-hover: var(--prata-70);
+  --dark-base-border-primary-active: var(--prata-80);
+  --dark-base-border-primary-disabled: var(--prata-50);
+  --dark-base-border-secondary-default: var(--prata-30);
+  --dark-base-border-secondary-hover: var(--prata-50);
+  --dark-base-border-secondary-active: var(--prata-60);
+  --dark-base-border-secondary-disabled: var(--prata-30);
+  --dark-low-primary-default: var(--prata-90);
+  --dark-low-primary-hover: var(--prata-80);
+  --dark-low-primary-active: var(--prata-95);
+  --dark-low-primary-disabled: var(--prata-50);
+  --dark-low-secondary-default: var(--prata-70);
+  --dark-low-secondary-hover: var(--prata-70);
+  --dark-low-secondary-active: var(--prata-70);
+  --dark-low-secondary-disabled: var(--prata-50);
+  --dark-low-tertiary-default: var(--prata-40);
+  --dark-low-tertiary-hover: var(--prata-40);
+  --dark-low-tertiary-active: var(--prata-40);
+  --dark-low-tertiary-disabled: var(--prata-50);
+  --dark-low-highlight-default: var(--arara-80);
+  --dark-low-highlight-hover: var(--arara-60);
+  --dark-low-highlight-active: var(--arara-45);
+  --dark-low-highlight-disabled: var(--arara-60);
+  --dark-low-accent-default: var(--prata-10);
+  --dark-low-accent-hover: var(--prata-15);
+  --dark-low-accent-active: var(--prata-20);
+  --dark-low-accent-disabled: var(--prata-10);
+  --dark-low-accent-highlight-default: var(--arara-20);
+  --dark-low-accent-highlight-hover: var(--arara-30);
+  --dark-low-accent-highlight-active: var(--arara-40);
+  --dark-low-accent-highlight-disabled: var(--arara-20);
+  --dark-low-error-default: var(--hot-60);
+  --dark-low-error-hover: var(--hot-60);
+  --dark-low-error-active: var(--hot-60);
+  --dark-low-error-disabled: var(--hot-60);
+  --dark-low-border-primary-default: var(--prata-50);
+  --dark-low-border-primary-hover: var(--prata-70);
+  --dark-low-border-primary-active: var(--prata-80);
+  --dark-low-border-primary-disabled: var(--prata-50);
+  --dark-low-border-secondary-default: var(--prata-30);
+  --dark-low-border-secondary-hover: var(--prata-50);
+  --dark-low-border-secondary-active: var(--prata-60);
+  --dark-low-border-secondary-disabled: var(--prata-30);
+  --dark-high-primary-default: var(--prata-90);
+  --dark-high-primary-hover: var(--prata-80);
+  --dark-high-primary-active: var(--prata-95);
+  --dark-high-primary-disabled: var(--prata-50);
+  --dark-high-secondary-default: var(--prata-70);
+  --dark-high-secondary-hover: var(--prata-80);
+  --dark-high-secondary-active: var(--prata-90);
+  --dark-high-secondary-disabled: var(--prata-50);
+  --dark-high-tertiary-default: var(--prata-40);
+  --dark-high-tertiary-hover: var(--prata-40);
+  --dark-high-tertiary-active: var(--prata-40);
+  --dark-high-tertiary-disabled: var(--prata-50);
+  --dark-high-highlight-default: var(--arara-80);
+  --dark-high-highlight-hover: var(--arara-60);
+  --dark-high-highlight-active: var(--arara-45);
+  --dark-high-highlight-disabled: var(--arara-60);
+  --dark-high-accent-default: var(--prata-20);
+  --dark-high-accent-hover: var(--prata-40);
+  --dark-high-accent-active: var(--prata-50);
+  --dark-high-accent-disabled: var(--prata-25);
+  --dark-high-accent-highlight-default: var(--arara-25);
+  --dark-high-accent-highlight-hover: var(--arara-35);
+  --dark-high-accent-highlight-active: var(--arara-45);
+  --dark-high-accent-highlight-disabled: var(--arara-25);
+  --dark-high-error-default: var(--hot-60);
+  --dark-high-error-hover: var(--hot-60);
+  --dark-high-error-active: var(--hot-60);
+  --dark-high-error-disabled: var(--hot-60);
+  --dark-high-border-primary-default: var(--prata-50);
+  --dark-high-border-primary-hover: var(--prata-70);
+  --dark-high-border-primary-active: var(--prata-80);
+  --dark-high-border-primary-disabled: var(--prata-50);
+  --dark-high-border-secondary-default: var(--prata-30);
+  --dark-high-border-secondary-hover: var(--prata-50);
+  --dark-high-border-secondary-active: var(--prata-60);
+  --dark-high-border-secondary-disabled: var(--prata-30);
+  --dark-invert-primary-default: var(--prata-20);
+  --dark-invert-primary-hover: var(--prata-30);
+  --dark-invert-primary-active: var(--prata-10);
+  --dark-invert-primary-disabled: var(--prata-70);
+  --dark-invert-secondary-default: var(--prata-35);
+  --dark-invert-secondary-hover: var(--prata-35);
+  --dark-invert-secondary-active: var(--prata-35);
+  --dark-invert-secondary-disabled: var(--prata-70);
+  --dark-invert-tertiary-default: var(--prata-60);
+  --dark-invert-tertiary-hover: var(--prata-40);
+  --dark-invert-tertiary-active: var(--prata-60);
+  --dark-invert-tertiary-disabled: var(--prata-70);
+  --dark-invert-highlight-default: var(--arara-75);
+  --dark-invert-highlight-hover: var(--arara-80);
+  --dark-invert-highlight-active: var(--arara-85);
+  --dark-invert-highlight-disabled: var(--arara-90);
+  --dark-invert-accent-default: var(--prata-90);
+  --dark-invert-accent-hover: var(--prata-80);
+  --dark-invert-accent-active: var(--prata-70);
+  --dark-invert-accent-disabled: var(--prata-95);
+  --dark-invert-accent-highlight-default: var(--arara-98);
+  --dark-invert-accent-highlight-hover: var(--arara-90);
+  --dark-invert-accent-highlight-active: var(--arara-85);
+  --dark-invert-accent-highlight-disabled: var(--arara-98);
+  --dark-invert-error-default: var(--hot-60);
+  --dark-invert-error-hover: var(--hot-60);
+  --dark-invert-error-active: var(--hot-60);
+  --dark-invert-error-disabled: var(--hot-60);
+  --dark-invert-border-primary-default: var(--prata-70);
+  --dark-invert-border-primary-hover: var(--prata-50);
+  --dark-invert-border-primary-active: var(--prata-30);
+  --dark-invert-border-primary-disabled: var(--prata-70);
+  --dark-invert-border-secondary-default: var(--prata-90);
+  --dark-invert-border-secondary-hover: var(--prata-60);
+  --dark-invert-border-secondary-active: var(--prata-50);
+  --dark-invert-border-secondary-disabled: var(--prata-80);
+  --dark-base-on-primary-default: var(--prata-20);
+  --dark-base-on-primary-hover: var(--prata-20);
+  --dark-base-on-primary-active: var(--prata-20);
+  --dark-base-on-primary-disabled: var(--prata-20);
+  --dark-base-on-secondary-default: var(--prata-20);
+  --dark-base-on-secondary-hover: var(--prata-20);
+  --dark-base-on-secondary-active: var(--prata-20);
+  --dark-base-on-secondary-disabled: var(--prata-20);
+  --dark-base-on-tertiary-default: var(--prata-20);
+  --dark-base-on-tertiary-hover: var(--prata-20);
+  --dark-base-on-tertiary-active: var(--prata-20);
+  --dark-base-on-tertiary-disabled: var(--prata-20);
+  --dark-base-on-highlight-default: var(--prata-20);
+  --dark-base-on-highlight-hover: var(--prata-20);
+  --dark-base-on-highlight-active: var(--prata-20);
+  --dark-base-on-highlight-disabled: var(--prata-20);
+  --dark-base-on-accent-default: var(--prata-90);
+  --dark-base-on-accent-hover: var(--prata-80);
+  --dark-base-on-accent-active: var(--prata-95);
+  --dark-base-on-accent-disabled: var(--prata-50);
+  --dark-base-on-accent-highlight-default: var(--arara-80);
+  --dark-base-on-accent-highlight-hover: var(--arara-80);
+  --dark-base-on-accent-highlight-active: var(--arara-80);
+  --dark-base-on-accent-highlight-disabled: var(--arara-80);
+  --dark-base-on-error-default: var(--hot-10);
+  --dark-base-on-error-hover: var(--hot-10);
+  --dark-base-on-error-active: var(--hot-10);
+  --dark-base-on-error-disabled: var(--hot-10);
+  --dark-base-on-border-primary-default: none;
+  --dark-base-on-border-primary-hover: none;
+  --dark-base-on-border-primary-active: none;
+  --dark-base-on-border-primary-disabled: none;
+  --dark-base-on-border-secondary-default: none;
+  --dark-base-on-border-secondary-hover: none;
+  --dark-base-on-border-secondary-active: none;
+  --dark-base-on-border-secondary-disabled: none;
+  --dark-low-on-primary-default: var(--prata-20);
+  --dark-low-on-primary-hover: var(--prata-20);
+  --dark-low-on-primary-active: var(--prata-20);
+  --dark-low-on-primary-disabled: var(--prata-20);
+  --dark-low-on-secondary-default: var(--prata-20);
+  --dark-low-on-secondary-hover: var(--prata-20);
+  --dark-low-on-secondary-active: var(--prata-20);
+  --dark-low-on-secondary-disabled: var(--prata-20);
+  --dark-low-on-tertiary-default: var(--prata-20);
+  --dark-low-on-tertiary-hover: var(--prata-20);
+  --dark-low-on-tertiary-active: var(--prata-20);
+  --dark-low-on-tertiary-disabled: var(--prata-20);
+  --dark-low-on-highlight-default: var(--prata-20);
+  --dark-low-on-highlight-hover: var(--prata-20);
+  --dark-low-on-highlight-active: var(--prata-20);
+  --dark-low-on-highlight-disabled: var(--prata-20);
+  --dark-low-on-accent-default: var(--prata-90);
+  --dark-low-on-accent-hover: var(--prata-80);
+  --dark-low-on-accent-active: var(--prata-95);
+  --dark-low-on-accent-disabled: var(--prata-50);
+  --dark-low-on-accent-highlight-default: var(--prata-90);
+  --dark-low-on-accent-highlight-hover: var(--prata-80);
+  --dark-low-on-accent-highlight-active: var(--prata-95);
+  --dark-low-on-accent-highlight-disabled: var(--prata-50);
+  --dark-low-on-error-default: var(--hot-10);
+  --dark-low-on-error-hover: var(--hot-10);
+  --dark-low-on-error-active: var(--hot-10);
+  --dark-low-on-error-disabled: var(--hot-10);
+  --dark-low-on-border-primary-default: none;
+  --dark-low-on-border-primary-hover: none;
+  --dark-low-on-border-primary-active: none;
+  --dark-low-on-border-primary-disabled: none;
+  --dark-low-on-border-secondary-default: none;
+  --dark-low-on-border-secondary-hover: none;
+  --dark-low-on-border-secondary-active: none;
+  --dark-low-on-border-secondary-disabled: none;
+  --dark-high-on-primary-default: var(--prata-20);
+  --dark-high-on-primary-hover: var(--prata-20);
+  --dark-high-on-primary-active: var(--prata-20);
+  --dark-high-on-primary-disabled: var(--prata-20);
+  --dark-high-on-secondary-default: var(--prata-20);
+  --dark-high-on-secondary-hover: var(--prata-20);
+  --dark-high-on-secondary-active: var(--prata-20);
+  --dark-high-on-secondary-disabled: var(--prata-20);
+  --dark-high-on-tertiary-default: var(--prata-20);
+  --dark-high-on-tertiary-hover: var(--prata-20);
+  --dark-high-on-tertiary-active: var(--prata-20);
+  --dark-high-on-tertiary-disabled: var(--prata-20);
+  --dark-high-on-highlight-default: var(--prata-20);
+  --dark-high-on-highlight-hover: var(--prata-20);
+  --dark-high-on-highlight-active: var(--prata-20);
+  --dark-high-on-highlight-disabled: var(--prata-20);
+  --dark-high-on-accent-default: var(--prata-90);
+  --dark-high-on-accent-hover: var(--prata-80);
+  --dark-high-on-accent-active: var(--prata-95);
+  --dark-high-on-accent-disabled: var(--prata-50);
+  --dark-high-on-accent-highlight-default: var(--prata-90);
+  --dark-high-on-accent-highlight-hover: var(--prata-80);
+  --dark-high-on-accent-highlight-active: var(--prata-95);
+  --dark-high-on-accent-highlight-disabled: var(--prata-50);
+  --dark-high-on-error-default: var(--hot-10);
+  --dark-high-on-error-hover: var(--hot-10);
+  --dark-high-on-error-active: var(--hot-10);
+  --dark-high-on-error-disabled: var(--hot-10);
+  --dark-high-on-border-primary-default: none;
+  --dark-high-on-border-primary-hover: none;
+  --dark-high-on-border-primary-active: none;
+  --dark-high-on-border-primary-disabled: none;
+  --dark-high-on-border-secondary-default: none;
+  --dark-high-on-border-secondary-hover: none;
+  --dark-high-on-border-secondary-active: none;
+  --dark-high-on-border-secondary-disabled: none;
+  --dark-invert-on-primary-default: var(--prata-99);
+  --dark-invert-on-primary-hover: var(--prata-99);
+  --dark-invert-on-primary-active: var(--prata-99);
+  --dark-invert-on-primary-disabled: var(--prata-99);
+  --dark-invert-on-secondary-default: var(--prata-99);
+  --dark-invert-on-secondary-hover: var(--prata-99);
+  --dark-invert-on-secondary-active: var(--prata-99);
+  --dark-invert-on-secondary-disabled: var(--prata-99);
+  --dark-invert-on-tertiary-default: var(--prata-99);
+  --dark-invert-on-tertiary-hover: var(--prata-99);
+  --dark-invert-on-tertiary-active: var(--prata-99);
+  --dark-invert-on-tertiary-disabled: var(--prata-99);
+  --dark-invert-on-highlight-default: var(--prata-99);
+  --dark-invert-on-highlight-hover: var(--prata-99);
+  --dark-invert-on-highlight-active: var(--prata-99);
+  --dark-invert-on-highlight-disabled: var(--prata-99);
+  --dark-invert-on-accent-default: var(--prata-20);
+  --dark-invert-on-accent-hover: var(--prata-30);
+  --dark-invert-on-accent-active: var(--prata-10);
+  --dark-invert-on-accent-disabled: var(--prata-70);
+  --dark-invert-on-accent-highlight-default: var(--prata-20);
+  --dark-invert-on-accent-highlight-hover: var(--prata-30);
+  --dark-invert-on-accent-highlight-active: var(--prata-10);
+  --dark-invert-on-accent-highlight-disabled: var(--prata-70);
+  --dark-invert-on-error-default: var(--hot-10);
+  --dark-invert-on-error-hover: var(--hot-10);
+  --dark-invert-on-error-active: var(--hot-10);
+  --dark-invert-on-error-disabled: var(--hot-10);
+  --dark-invert-on-border-primary-default: var(--prata-70);
+  --dark-invert-on-border-primary-hover: var(--prata-50);
+  --dark-invert-on-border-primary-active: var(--prata-30);
+  --dark-invert-on-border-primary-disabled: var(--prata-70);
+  --dark-invert-on-border-secondary-default: var(--prata-80);
+  --dark-invert-on-border-secondary-hover: var(--prata-60);
+  --dark-invert-on-border-secondary-active: var(--prata-50);
+  --dark-invert-on-border-secondary-disabled: var(--prata-80);
+  --light-surface-base: var(--prata-99);
+  --light-surface-low: var(--prata-95);
+  --light-surface-high: var(--prata-90);
+  --light-surface-invert: var(--prata-10);
+  --light-base-primary-default: var(--prata-10);
+  --light-base-primary-hover: var(--prata-30);
+  --light-base-primary-active: var(--prata-20);
+  --light-base-primary-disabled: var(--prata-60);
+  --light-base-secondary-default: var(--prata-30);
+  --light-base-secondary-hover: var(--prata-10);
+  --light-base-secondary-active: var(--prata-20);
+  --light-base-secondary-disabled: var(--prata-60);
+  --light-base-tertiary-default: var(--prata-50);
+  --light-base-tertiary-hover: var(--prata-10);
+  --light-base-tertiary-active: var(--prata-30);
+  --light-base-tertiary-disabled: var(--prata-60);
+  --light-base-highlight-default: var(--arara-70);
+  --light-base-highlight-hover: var(--arara-50);
+  --light-base-highlight-active: var(--arara-50);
+  --light-base-highlight-disabled: var(--arara-95);
+  --light-base-accent-default: var(--prata-90);
+  --light-base-accent-hover: var(--prata-80);
+  --light-base-accent-active: var(--prata-70);
+  --light-base-accent-disabled: var(--prata-90);
+  --light-base-accent-highlight-default: var(--arara-98);
+  --light-base-accent-highlight-hover: var(--arara-90);
+  --light-base-accent-highlight-active: var(--arara-85);
+  --light-base-accent-highlight-disabled: var(--arara-98);
+  --light-base-error-default: var(--hot-60);
+  --light-base-error-hover: var(--hot-60);
+  --light-base-error-active: var(--hot-60);
+  --light-base-error-disabled: var(--hot-60);
+  --light-base-border-primary-default: var(--prata-70);
+  --light-base-border-primary-hover: var(--prata-50);
+  --light-base-border-primary-active: var(--prata-30);
+  --light-base-border-primary-disabled: var(--prata-70);
+  --light-base-border-secondary-default: var(--prata-80);
+  --light-base-border-secondary-hover: var(--prata-60);
+  --light-base-border-secondary-active: var(--prata-50);
+  --light-base-border-secondary-disabled: var(--prata-80);
+  --light-low-primary-default: var(--prata-20);
+  --light-low-primary-hover: var(--prata-30);
+  --light-low-primary-active: var(--prata-10);
+  --light-low-primary-disabled: var(--prata-70);
+  --light-low-secondary-default: var(--prata-35);
+  --light-low-secondary-hover: var(--prata-35);
+  --light-low-secondary-active: var(--prata-35);
+  --light-low-secondary-disabled: var(--prata-70);
+  --light-low-tertiary-default: var(--prata-60);
+  --light-low-tertiary-hover: var(--prata-60);
+  --light-low-tertiary-active: var(--prata-60);
+  --light-low-tertiary-disabled: var(--prata-70);
+  --light-low-highlight-default: var(--arara-70);
+  --light-low-highlight-hover: var(--arara-50);
+  --light-low-highlight-active: var(--arara-50);
+  --light-low-highlight-disabled: var(--arara-95);
+  --light-low-accent-default: var(--prata-90);
+  --light-low-accent-hover: var(--prata-80);
+  --light-low-accent-active: var(--prata-70);
+  --light-low-accent-disabled: var(--prata-90);
+  --light-low-accent-highlight-default: var(--arara-95);
+  --light-low-accent-highlight-hover: var(--arara-90);
+  --light-low-accent-highlight-active: var(--arara-85);
+  --light-low-accent-highlight-disabled: var(--arara-95);
+  --light-low-error-default: var(--hot-60);
+  --light-low-error-hover: var(--hot-60);
+  --light-low-error-active: var(--hot-60);
+  --light-low-error-disabled: var(--hot-60);
+  --light-low-border-primary-default: var(--prata-70);
+  --light-low-border-primary-hover: var(--prata-50);
+  --light-low-border-primary-active: var(--prata-30);
+  --light-low-border-primary-disabled: var(--prata-70);
+  --light-low-border-secondary-default: var(--prata-80);
+  --light-low-border-secondary-hover: var(--prata-60);
+  --light-low-border-secondary-active: var(--prata-50);
+  --light-low-border-secondary-disabled: var(--prata-80);
+  --light-high-primary-default: var(--prata-20);
+  --light-high-primary-hover: var(--prata-30);
+  --light-high-primary-active: var(--prata-10);
+  --light-high-primary-disabled: var(--prata-70);
+  --light-high-secondary-default: var(--prata-35);
+  --light-high-secondary-hover: var(--prata-35);
+  --light-high-secondary-active: var(--prata-35);
+  --light-high-secondary-disabled: var(--prata-70);
+  --light-high-tertiary-default: var(--prata-60);
+  --light-high-tertiary-hover: var(--prata-60);
+  --light-high-tertiary-active: var(--prata-60);
+  --light-high-tertiary-disabled: var(--prata-70);
+  --light-high-highlight-default: var(--arara-70);
+  --light-high-highlight-hover: var(--arara-50);
+  --light-high-highlight-active: var(--arara-50);
+  --light-high-highlight-disabled: var(--arara-95);
+  --light-high-accent-default: var(--prata-80);
+  --light-high-accent-hover: var(--prata-70);
+  --light-high-accent-active: var(--prata-75);
+  --light-high-accent-disabled: var(--prata-80);
+  --light-high-accent-highlight-default: var(--arara-95);
+  --light-high-accent-highlight-hover: var(--arara-90);
+  --light-high-accent-highlight-active: var(--arara-85);
+  --light-high-accent-highlight-disabled: var(--arara-95);
+  --light-high-error-default: var(--hot-60);
+  --light-high-error-hover: var(--hot-60);
+  --light-high-error-active: var(--hot-60);
+  --light-high-error-disabled: var(--hot-60);
+  --light-high-border-primary-default: var(--prata-70);
+  --light-high-border-primary-hover: var(--prata-50);
+  --light-high-border-primary-active: var(--prata-30);
+  --light-high-border-primary-disabled: var(--prata-70);
+  --light-high-border-secondary-default: var(--prata-80);
+  --light-high-border-secondary-hover: var(--prata-60);
+  --light-high-border-secondary-active: var(--prata-50);
+  --light-high-border-secondary-disabled: var(--prata-80);
+  --light-invert-primary-default: var(--dark-base-primary-default);
+  --light-invert-primary-hover: var(--dark-base-primary-hover);
+  --light-invert-primary-active: var(--dark-base-primary-active);
+  --light-invert-primary-disabled: var(--dark-base-primary-disabled);
+  --light-invert-secondary-default: var(--dark-base-secondary-default);
+  --light-invert-secondary-hover: var(--dark-base-secondary-hover);
+  --light-invert-secondary-active: var(--dark-base-secondary-active);
+  --light-invert-secondary-disabled: var(--dark-base-secondary-disabled);
+  --light-invert-tertiary-default: var(--dark-base-tertiary-default);
+  --light-invert-tertiary-hover: var(--dark-base-tertiary-hover);
+  --light-invert-tertiary-active: var(--dark-base-tertiary-active);
+  --light-invert-tertiary-disabled: var(--dark-base-tertiary-disabled);
+  --light-invert-highlight-default: var(--dark-base-highlight-default);
+  --light-invert-highlight-hover: var(--dark-base-highlight-hover);
+  --light-invert-highlight-active: var(--dark-base-highlight-active);
+  --light-invert-highlight-disabled: var(--dark-base-highlight-disabled);
+  --light-invert-accent-default: var(--dark-base-accent-default);
+  --light-invert-accent-hover: var(--dark-base-accent-hover);
+  --light-invert-accent-active: var(--dark-base-accent-active);
+  --light-invert-accent-disabled: var(--dark-base-accent-disabled);
+  --light-invert-accent-highlight-default: var(
+    --dark-base-accent-highlight-default
+  );
+  --light-invert-accent-highlight-hover: var(
+    --dark-base-accent-highlight-hover
+  );
+  --light-invert-accent-highlight-active: var(
+    --dark-base-accent-highlight-active
+  );
+  --light-invert-accent-highlight-disabled: var(
+    --dark-base-accent-highlight-disabled
+  );
+  --light-invert-border-default: var(--dark-base-border-default);
+  --light-invert-border-hover: var(--dark-base-border-hover);
+  --light-invert-border-active: var(--dark-base-border-active);
+  --light-invert-border-disabled: var(--dark-base-border-disabled);
+  --light-invert-error-default: var(--dark-base-error-default);
+  --light-invert-error-hover: var(--dark-base-error-hover);
+  --light-invert-error-active: var(--dark-base-error-active);
+  --light-invert-error-disabled: var(--dark-base-error-disabled);
+  --light-invert-border-primary-default: var(
+    --dark-base-border-primary-default
+  );
+  --light-invert-border-primary-hover: var(--dark-base-border-primary-hover);
+  --light-invert-border-primary-active: var(--dark-base-border-primary-active);
+  --light-invert-border-primary-disabled: var(
+    --dark-base-border-primary-disabled
+  );
+  --light-invert-border-secondary-default: var(
+    --dark-base-border-secondary-default
+  );
+  --light-invert-border-secondary-hover: var(
+    --dark-base-border-secondary-hover
+  );
+  --light-invert-border-secondary-active: var(
+    --dark-base-border-secondary-active
+  );
+  --light-invert-border-secondary-disabled: var(
+    --dark-base-border-secondary-disabled
+  );
+  --light-base-on-primary-default: var(--prata-99);
+  --light-base-on-primary-hover: var(--prata-99);
+  --light-base-on-primary-active: var(--prata-99);
+  --light-base-on-primary-disabled: var(--prata-99);
+  --light-base-on-secondary-default: var(--prata-99);
+  --light-base-on-secondary-hover: var(--prata-99);
+  --light-base-on-secondary-active: var(--prata-99);
+  --light-base-on-secondary-disabled: var(--prata-99);
+  --light-base-on-tertiary-default: var(--prata-99);
+  --light-base-on-tertiary-hover: var(--prata-99);
+  --light-base-on-tertiary-active: var(--prata-99);
+  --light-base-on-tertiary-disabled: var(--prata-99);
+  --light-base-on-highlight-default: var(--prata-99);
+  --light-base-on-highlight-hover: var(--prata-99);
+  --light-base-on-highlight-active: var(--prata-99);
+  --light-base-on-highlight-disabled: var(--prata-99);
+  --light-base-on-accent-default: var(--prata-20);
+  --light-base-on-accent-hover: var(--prata-30);
+  --light-base-on-accent-active: var(--prata-10);
+  --light-base-on-accent-disabled: var(--prata-70);
+  --light-base-on-accent-highlight-default: var(--prata-10);
+  --light-base-on-accent-highlight-hover: var(--prata-30);
+  --light-base-on-accent-highlight-active: var(--prata-20);
+  --light-base-on-accent-highlight-disabled: var(--prata-60);
+  --light-base-on-error-default: var(--hot-10);
+  --light-base-on-error-hover: var(--hot-10);
+  --light-base-on-error-active: var(--hot-10);
+  --light-base-on-error-disabled: var(--hot-10);
+  --light-base-on-border-primary-default: none;
+  --light-base-on-border-primary-hover: none;
+  --light-base-on-border-primary-active: none;
+  --light-base-on-border-primary-disabled: none;
+  --light-base-on-border-secondary-default: none;
+  --light-base-on-border-secondary-hover: none;
+  --light-base-on-border-secondary-active: none;
+  --light-base-on-border-secondary-disabled: none;
+  --light-low-on-primary-default: var(--prata-99);
+  --light-low-on-primary-hover: var(--prata-99);
+  --light-low-on-primary-active: var(--prata-99);
+  --light-low-on-primary-disabled: var(--prata-99);
+  --light-low-on-secondary-default: var(--prata-99);
+  --light-low-on-secondary-hover: var(--prata-99);
+  --light-low-on-secondary-active: var(--prata-99);
+  --light-low-on-secondary-disabled: var(--prata-99);
+  --light-low-on-tertiary-default: var(--prata-99);
+  --light-low-on-tertiary-hover: var(--prata-99);
+  --light-low-on-tertiary-active: var(--prata-99);
+  --light-low-on-tertiary-disabled: var(--prata-99);
+  --light-low-on-highlight-default: var(--prata-99);
+  --light-low-on-highlight-hover: var(--prata-99);
+  --light-low-on-highlight-active: var(--prata-99);
+  --light-low-on-highlight-disabled: var(--prata-99);
+  --light-low-on-accent-default: var(--prata-20);
+  --light-low-on-accent-hover: var(--prata-30);
+  --light-low-on-accent-active: var(--prata-10);
+  --light-low-on-accent-disabled: var(--prata-70);
+  --light-low-on-accent-highlight-default: var(--prata-10);
+  --light-low-on-accent-highlight-hover: var(--prata-30);
+  --light-low-on-accent-highlight-active: var(--prata-20);
+  --light-low-on-accent-highlight-disabled: var(--prata-60);
+  --light-low-on-error-default: var(--hot-10);
+  --light-low-on-error-hover: var(--hot-10);
+  --light-low-on-error-active: var(--hot-10);
+  --light-low-on-error-disabled: var(--hot-10);
+  --light-low-on-border-primary-default: none;
+  --light-low-on-border-primary-hover: none;
+  --light-low-on-border-primary-active: none;
+  --light-low-on-border-primary-disabled: none;
+  --light-low-on-border-secondary-default: none;
+  --light-low-on-border-secondary-hover: none;
+  --light-low-on-border-secondary-active: none;
+  --light-low-on-border-secondary-disabled: none;
+  --light-high-on-primary-default: var(--prata-99);
+  --light-high-on-primary-hover: var(--prata-99);
+  --light-high-on-primary-active: var(--prata-99);
+  --light-high-on-primary-disabled: var(--prata-99);
+  --light-high-on-secondary-default: var(--prata-99);
+  --light-high-on-secondary-hover: var(--prata-99);
+  --light-high-on-secondary-active: var(--prata-99);
+  --light-high-on-secondary-disabled: var(--prata-99);
+  --light-high-on-tertiary-default: var(--prata-99);
+  --light-high-on-tertiary-hover: var(--prata-99);
+  --light-high-on-tertiary-active: var(--prata-99);
+  --light-high-on-tertiary-disabled: var(--prata-99);
+  --light-high-on-highlight-default: var(--prata-99);
+  --light-high-on-highlight-hover: var(--prata-99);
+  --light-high-on-highlight-active: var(--prata-99);
+  --light-high-on-highlight-disabled: var(--prata-99);
+  --light-high-on-accent-default: var(--prata-20);
+  --light-high-on-accent-hover: var(--prata-30);
+  --light-high-on-accent-active: var(--prata-10);
+  --light-high-on-accent-disabled: var(--prata-70);
+  --light-high-on-accent-highlight-default: var(--prata-10);
+  --light-high-on-accent-highlight-hover: var(--prata-30);
+  --light-high-on-accent-highlight-active: var(--prata-20);
+  --light-high-on-accent-highlight-disabled: var(--prata-60);
+  --light-high-on-error-default: var(--hot-10);
+  --light-high-on-error-hover: var(--hot-10);
+  --light-high-on-error-active: var(--hot-10);
+  --light-high-on-error-disabled: var(--hot-10);
+  --light-high-on-border-primary-default: none;
+  --light-high-on-border-primary-hover: none;
+  --light-high-on-border-primary-active: none;
+  --light-high-on-border-primary-disabled: none;
+  --light-high-on-border-secondary-default: none;
+  --light-high-on-border-secondary-hover: none;
+  --light-high-on-border-secondary-active: none;
+  --light-high-on-border-secondary-disabled: none;
+}
+
+:root {
+  color-scheme: dark;
+  --surface-base: var(--dark-surface-base);
+  --surface-low: var(--dark-surface-low);
+  --surface-high: var(--dark-surface-high);
+  --surface-invert: var(--dark-surface-invert);
+  --base-primary-default: var(--dark-base-primary-default);
+  --base-primary-hover: var(--dark-base-primary-hover);
+  --base-primary-active: var(--dark-base-primary-active);
+  --base-primary-disabled: var(--dark-base-primary-disabled);
+  --base-secondary-default: var(--dark-base-secondary-default);
+  --base-secondary-hover: var(--dark-base-secondary-hover);
+  --base-secondary-active: var(--dark-base-secondary-active);
+  --base-secondary-disabled: var(--dark-base-secondary-disabled);
+  --base-tertiary-default: var(--dark-base-tertiary-default);
+  --base-tertiary-hover: var(--dark-base-tertiary-hover);
+  --base-tertiary-active: var(--dark-base-tertiary-active);
+  --base-tertiary-disabled: var(--dark-base-tertiary-disabled);
+  --base-highlight-default: var(--dark-base-highlight-default);
+  --base-highlight-hover: var(--dark-base-highlight-hover);
+  --base-highlight-active: var(--dark-base-highlight-active);
+  --base-highlight-disabled: var(--dark-base-highlight-disabled);
+  --base-accent-default: var(--dark-base-accent-default);
+  --base-accent-hover: var(--dark-base-accent-hover);
+  --base-accent-active: var(--dark-base-accent-active);
+  --base-accent-disabled: var(--dark-base-accent-disabled);
+  --base-accent-highlight-default: var(--dark-base-accent-highlight-default);
+  --base-accent-highlight-hover: var(--dark-base-accent-highlight-hover);
+  --base-accent-highlight-active: var(--dark-base-accent-highlight-active);
+  --base-accent-highlight-disabled: var(--dark-base-accent-highlight-disabled);
+  --base-error-default: var(--dark-base-error-default);
+  --base-error-hover: var(--dark-base-error-hover);
+  --base-error-active: var(--dark-base-error-active);
+  --base-error-disabled: var(--dark-base-error-disabled);
+  --base-border-primary-default: var(--dark-base-border-primary-default);
+  --base-border-primary-hover: var(--dark-base-border-primary-hover);
+  --base-border-primary-active: var(--dark-base-border-primary-active);
+  --base-border-primary-disabled: var(--dark-base-border-primary-disabled);
+  --base-border-secondary-default: var(--dark-base-border-secondary-default);
+  --base-border-secondary-hover: var(--dark-base-border-secondary-hover);
+  --base-border-secondary-active: var(--dark-base-border-secondary-active);
+  --base-border-secondary-disabled: var(--dark-base-border-secondary-disabled);
+  --low-primary-default: var(--dark-low-primary-default);
+  --low-primary-hover: var(--dark-low-primary-hover);
+  --low-primary-active: var(--dark-low-primary-active);
+  --low-primary-disabled: var(--dark-low-primary-disabled);
+  --low-secondary-default: var(--dark-low-secondary-default);
+  --low-secondary-hover: var(--dark-low-secondary-hover);
+  --low-secondary-active: var(--dark-low-secondary-active);
+  --low-secondary-disabled: var(--dark-low-secondary-disabled);
+  --low-tertiary-default: var(--dark-low-tertiary-default);
+  --low-tertiary-hover: var(--dark-low-tertiary-hover);
+  --low-tertiary-active: var(--dark-low-tertiary-active);
+  --low-tertiary-disabled: var(--dark-low-tertiary-disabled);
+  --low-highlight-default: var(--dark-low-highlight-default);
+  --low-highlight-hover: var(--dark-low-highlight-hover);
+  --low-highlight-active: var(--dark-low-highlight-active);
+  --low-highlight-disabled: var(--dark-low-highlight-disabled);
+  --low-accent-default: var(--dark-low-accent-default);
+  --low-accent-hover: var(--dark-low-accent-hover);
+  --low-accent-active: var(--dark-low-accent-active);
+  --low-accent-disabled: var(--dark-low-accent-disabled);
+  --low-accent-highlight-default: var(--dark-low-accent-highlight-default);
+  --low-accent-highlight-hover: var(--dark-low-accent-highlight-hover);
+  --low-accent-highlight-active: var(--dark-low-accent-highlight-active);
+  --low-accent-highlight-disabled: var(--dark-low-accent-highlight-disabled);
+  --low-error-default: var(--dark-low-error-default);
+  --low-error-hover: var(--dark-low-error-hover);
+  --low-error-active: var(--dark-low-error-active);
+  --low-error-disabled: var(--dark-low-error-disabled);
+  --low-border-primary-default: var(--dark-low-border-primary-default);
+  --low-border-primary-hover: var(--dark-low-border-primary-hover);
+  --low-border-primary-active: var(--dark-low-border-primary-active);
+  --low-border-primary-disabled: var(--dark-low-border-primary-disabled);
+  --low-border-secondary-default: var(--dark-low-border-secondary-default);
+  --low-border-secondary-hover: var(--dark-low-border-secondary-hover);
+  --low-border-secondary-active: var(--dark-low-border-secondary-active);
+  --low-border-secondary-disabled: var(--dark-low-border-secondary-disabled);
+  --high-primary-default: var(--dark-high-primary-default);
+  --high-primary-hover: var(--dark-high-primary-hover);
+  --high-primary-active: var(--dark-high-primary-active);
+  --high-primary-disabled: var(--dark-high-primary-disabled);
+  --high-secondary-default: var(--dark-high-secondary-default);
+  --high-secondary-hover: var(--dark-high-secondary-hover);
+  --high-secondary-active: var(--dark-high-secondary-active);
+  --high-secondary-disabled: var(--dark-high-secondary-disabled);
+  --high-tertiary-default: var(--dark-high-tertiary-default);
+  --high-tertiary-hover: var(--dark-high-tertiary-hover);
+  --high-tertiary-active: var(--dark-high-tertiary-active);
+  --high-tertiary-disabled: var(--dark-high-tertiary-disabled);
+  --high-highlight-default: var(--dark-high-highlight-default);
+  --high-highlight-hover: var(--dark-high-highlight-hover);
+  --high-highlight-active: var(--dark-high-highlight-active);
+  --high-highlight-disabled: var(--dark-high-highlight-disabled);
+  --high-accent-default: var(--dark-high-accent-default);
+  --high-accent-hover: var(--dark-high-accent-hover);
+  --high-accent-active: var(--dark-high-accent-active);
+  --high-accent-disabled: var(--dark-high-accent-disabled);
+  --high-accent-highlight-default: var(--dark-high-accent-highlight-default);
+  --high-accent-highlight-hover: var(--dark-high-accent-highlight-hover);
+  --high-accent-highlight-active: var(--dark-high-accent-highlight-active);
+  --high-accent-highlight-disabled: var(--dark-high-accent-highlight-disabled);
+  --high-error-default: var(--dark-high-error-default);
+  --high-error-hover: var(--dark-high-error-hover);
+  --high-error-active: var(--dark-high-error-active);
+  --high-error-disabled: var(--dark-high-error-disabled);
+  --high-border-primary-default: var(--dark-high-border-primary-default);
+  --high-border-primary-hover: var(--dark-high-border-primary-hover);
+  --high-border-primary-active: var(--dark-high-border-primary-active);
+  --high-border-primary-disabled: var(--dark-high-border-primary-disabled);
+  --high-border-secondary-default: var(--dark-high-border-secondary-default);
+  --high-border-secondary-hover: var(--dark-high-border-secondary-hover);
+  --high-border-secondary-active: var(--dark-high-border-secondary-active);
+  --high-border-secondary-disabled: var(--dark-high-border-secondary-disabled);
+  --invert-primary-default: var(--dark-invert-primary-default);
+  --invert-primary-hover: var(--dark-invert-primary-hover);
+  --invert-primary-active: var(--dark-invert-primary-active);
+  --invert-primary-disabled: var(--dark-invert-primary-disabled);
+  --invert-secondary-default: var(--dark-invert-secondary-default);
+  --invert-secondary-hover: var(--dark-invert-secondary-hover);
+  --invert-secondary-active: var(--dark-invert-secondary-active);
+  --invert-secondary-disabled: var(--dark-invert-secondary-disabled);
+  --invert-tertiary-default: var(--dark-invert-tertiary-default);
+  --invert-tertiary-hover: var(--dark-invert-tertiary-hover);
+  --invert-tertiary-active: var(--dark-invert-tertiary-active);
+  --invert-tertiary-disabled: var(--dark-invert-tertiary-disabled);
+  --invert-highlight-default: var(--dark-invert-highlight-default);
+  --invert-highlight-hover: var(--dark-invert-highlight-hover);
+  --invert-highlight-active: var(--dark-invert-highlight-active);
+  --invert-highlight-disabled: var(--dark-invert-highlight-disabled);
+  --invert-accent-default: var(--dark-invert-accent-default);
+  --invert-accent-hover: var(--dark-invert-accent-hover);
+  --invert-accent-active: var(--dark-invert-accent-active);
+  --invert-accent-disabled: var(--dark-invert-accent-disabled);
+  --invert-accent-highlight-default: var(
+    --dark-invert-accent-highlight-default
+  );
+  --invert-accent-highlight-hover: var(--dark-invert-accent-highlight-hover);
+  --invert-accent-highlight-active: var(--dark-invert-accent-highlight-active);
+  --invert-accent-highlight-disabled: var(
+    --dark-invert-accent-highlight-disabled
+  );
+  --invert-error-default: var(--dark-invert-error-default);
+  --invert-error-hover: var(--dark-invert-error-hover);
+  --invert-error-active: var(--dark-invert-error-active);
+  --invert-error-disabled: var(--dark-invert-error-disabled);
+  --invert-border-primary-default: var(--dark-invert-border-primary-default);
+  --invert-border-primary-hover: var(--dark-invert-border-primary-hover);
+  --invert-border-primary-active: var(--dark-invert-border-primary-active);
+  --invert-border-primary-disabled: var(--dark-invert-border-primary-disabled);
+  --invert-border-secondary-default: var(
+    --dark-invert-border-secondary-default
+  );
+  --invert-border-secondary-hover: var(--dark-invert-border-secondary-hover);
+  --invert-border-secondary-active: var(--dark-invert-border-secondary-active);
+  --invert-border-secondary-disabled: var(
+    --dark-invert-border-secondary-disabled
+  );
+  --base-on-primary-default: var(--dark-base-on-primary-default);
+  --base-on-primary-hover: var(--dark-base-on-primary-hover);
+  --base-on-primary-active: var(--dark-base-on-primary-active);
+  --base-on-primary-disabled: var(--dark-base-on-primary-disabled);
+  --base-on-secondary-default: var(--dark-base-on-secondary-default);
+  --base-on-secondary-hover: var(--dark-base-on-secondary-hover);
+  --base-on-secondary-active: var(--dark-base-on-secondary-active);
+  --base-on-secondary-disabled: var(--dark-base-on-secondary-disabled);
+  --base-on-tertiary-default: var(--dark-base-on-tertiary-default);
+  --base-on-tertiary-hover: var(--dark-base-on-tertiary-hover);
+  --base-on-tertiary-active: var(--dark-base-on-tertiary-active);
+  --base-on-tertiary-disabled: var(--dark-base-on-tertiary-disabled);
+  --base-on-highlight-default: var(--dark-base-on-highlight-default);
+  --base-on-highlight-hover: var(--dark-base-on-highlight-hover);
+  --base-on-highlight-active: var(--dark-base-on-highlight-active);
+  --base-on-highlight-disabled: var(--dark-base-on-highlight-disabled);
+  --base-on-accent-default: var(--dark-base-on-accent-default);
+  --base-on-accent-hover: var(--dark-base-on-accent-hover);
+  --base-on-accent-active: var(--dark-base-on-accent-active);
+  --base-on-accent-disabled: var(--dark-base-on-accent-disabled);
+  --base-on-accent-highlight-default: var(
+    --dark-base-on-accent-highlight-default
+  );
+  --base-on-accent-highlight-hover: var(--dark-base-on-accent-highlight-hover);
+  --base-on-accent-highlight-active: var(
+    --dark-base-on-accent-highlight-active
+  );
+  --base-on-accent-highlight-disabled: var(
+    --dark-base-on-accent-highlight-disabled
+  );
+  --base-on-error-default: var(--dark-base-on-error-default);
+  --base-on-error-hover: var(--dark-base-on-error-hover);
+  --base-on-error-active: var(--dark-base-on-error-active);
+  --base-on-error-disabled: var(--dark-base-on-error-disabled);
+  --base-on-border-primary-default: var(--dark-base-on-border-primary-default);
+  --base-on-border-primary-hover: var(--dark-base-on-border-primary-hover);
+  --base-on-border-primary-active: var(--dark-base-on-border-primary-active);
+  --base-on-border-primary-disabled: var(
+    --dark-base-on-border-primary-disabled
+  );
+  --base-on-border-secondary-default: var(
+    --dark-base-on-border-secondary-default
+  );
+  --base-on-border-secondary-hover: var(--dark-base-on-border-secondary-hover);
+  --base-on-border-secondary-active: var(
+    --dark-base-on-border-secondary-active
+  );
+  --base-on-border-secondary-disabled: var(
+    --dark-base-on-border-secondary-disabled
+  );
+  --low-on-primary-default: var(--dark-low-on-primary-default);
+  --low-on-primary-hover: var(--dark-low-on-primary-hover);
+  --low-on-primary-active: var(--dark-low-on-primary-active);
+  --low-on-primary-disabled: var(--dark-low-on-primary-disabled);
+  --low-on-secondary-default: var(--dark-low-on-secondary-default);
+  --low-on-secondary-hover: var(--dark-low-on-secondary-hover);
+  --low-on-secondary-active: var(--dark-low-on-secondary-active);
+  --low-on-secondary-disabled: var(--dark-low-on-secondary-disabled);
+  --low-on-tertiary-default: var(--dark-low-on-tertiary-default);
+  --low-on-tertiary-hover: var(--dark-low-on-tertiary-hover);
+  --low-on-tertiary-active: var(--dark-low-on-tertiary-active);
+  --low-on-tertiary-disabled: var(--dark-low-on-tertiary-disabled);
+  --low-on-highlight-default: var(--dark-low-on-highlight-default);
+  --low-on-highlight-hover: var(--dark-low-on-highlight-hover);
+  --low-on-highlight-active: var(--dark-low-on-highlight-active);
+  --low-on-highlight-disabled: var(--dark-low-on-highlight-disabled);
+  --low-on-accent-default: var(--dark-low-on-accent-default);
+  --low-on-accent-hover: var(--dark-low-on-accent-hover);
+  --low-on-accent-active: var(--dark-low-on-accent-active);
+  --low-on-accent-disabled: var(--dark-low-on-accent-disabled);
+  --low-on-accent-highlight-default: var(
+    --dark-low-on-accent-highlight-default
+  );
+  --low-on-accent-highlight-hover: var(--dark-low-on-accent-highlight-hover);
+  --low-on-accent-highlight-active: var(--dark-low-on-accent-highlight-active);
+  --low-on-accent-highlight-disabled: var(
+    --dark-low-on-accent-highlight-disabled
+  );
+  --low-on-error-default: var(--dark-low-on-error-default);
+  --low-on-error-hover: var(--dark-low-on-error-hover);
+  --low-on-error-active: var(--dark-low-on-error-active);
+  --low-on-error-disabled: var(--dark-low-on-error-disabled);
+  --low-on-border-primary-default: var(--dark-low-on-border-primary-default);
+  --low-on-border-primary-hover: var(--dark-low-on-border-primary-hover);
+  --low-on-border-primary-active: var(--dark-low-on-border-primary-active);
+  --low-on-border-primary-disabled: var(--dark-low-on-border-primary-disabled);
+  --low-on-border-secondary-default: var(
+    --dark-low-on-border-secondary-default
+  );
+  --low-on-border-secondary-hover: var(--dark-low-on-border-secondary-hover);
+  --low-on-border-secondary-active: var(--dark-low-on-border-secondary-active);
+  --low-on-border-secondary-disabled: var(
+    --dark-low-on-border-secondary-disabled
+  );
+  --high-on-primary-default: var(--dark-high-on-primary-default);
+  --high-on-primary-hover: var(--dark-high-on-primary-hover);
+  --high-on-primary-active: var(--dark-high-on-primary-active);
+  --high-on-primary-disabled: var(--dark-high-on-primary-disabled);
+  --high-on-secondary-default: var(--dark-high-on-secondary-default);
+  --high-on-secondary-hover: var(--dark-high-on-secondary-hover);
+  --high-on-secondary-active: var(--dark-high-on-secondary-active);
+  --high-on-secondary-disabled: var(--dark-high-on-secondary-disabled);
+  --high-on-tertiary-default: var(--dark-high-on-tertiary-default);
+  --high-on-tertiary-hover: var(--dark-high-on-tertiary-hover);
+  --high-on-tertiary-active: var(--dark-high-on-tertiary-active);
+  --high-on-tertiary-disabled: var(--dark-high-on-tertiary-disabled);
+  --high-on-highlight-default: var(--dark-high-on-highlight-default);
+  --high-on-highlight-hover: var(--dark-high-on-highlight-hover);
+  --high-on-highlight-active: var(--dark-high-on-highlight-active);
+  --high-on-highlight-disabled: var(--dark-high-on-highlight-disabled);
+  --high-on-accent-default: var(--dark-high-on-accent-default);
+  --high-on-accent-hover: var(--dark-high-on-accent-hover);
+  --high-on-accent-active: var(--dark-high-on-accent-active);
+  --high-on-accent-disabled: var(--dark-high-on-accent-disabled);
+  --high-on-accent-highlight-default: var(
+    --dark-high-on-accent-highlight-default
+  );
+  --high-on-accent-highlight-hover: var(--dark-high-on-accent-highlight-hover);
+  --high-on-accent-highlight-active: var(
+    --dark-high-on-accent-highlight-active
+  );
+  --high-on-accent-highlight-disabled: var(
+    --dark-high-on-accent-highlight-disabled
+  );
+  --high-on-error-default: var(--dark-high-on-error-default);
+  --high-on-error-hover: var(--dark-high-on-error-hover);
+  --high-on-error-active: var(--dark-high-on-error-active);
+  --high-on-error-disabled: var(--dark-high-on-error-disabled);
+  --high-on-border-primary-default: var(--dark-high-on-border-primary-default);
+  --high-on-border-primary-hover: var(--dark-high-on-border-primary-hover);
+  --high-on-border-primary-active: var(--dark-high-on-border-primary-active);
+  --high-on-border-primary-disabled: var(
+    --dark-high-on-border-primary-disabled
+  );
+  --high-on-border-secondary-default: var(
+    --dark-high-on-border-secondary-default
+  );
+  --high-on-border-secondary-hover: var(--dark-high-on-border-secondary-hover);
+  --high-on-border-secondary-active: var(
+    --dark-high-on-border-secondary-active
+  );
+  --high-on-border-secondary-disabled: var(
+    --dark-high-on-border-secondary-disabled
+  );
+  --invert-on-primary-default: var(--dark-invert-on-primary-default);
+  --invert-on-primary-hover: var(--dark-invert-on-primary-hover);
+  --invert-on-primary-active: var(--dark-invert-on-primary-active);
+  --invert-on-primary-disabled: var(--dark-invert-on-primary-disabled);
+  --invert-on-secondary-default: var(--dark-invert-on-secondary-default);
+  --invert-on-secondary-hover: var(--dark-invert-on-secondary-hover);
+  --invert-on-secondary-active: var(--dark-invert-on-secondary-active);
+  --invert-on-secondary-disabled: var(--dark-invert-on-secondary-disabled);
+  --invert-on-tertiary-default: var(--dark-invert-on-tertiary-default);
+  --invert-on-tertiary-hover: var(--dark-invert-on-tertiary-hover);
+  --invert-on-tertiary-active: var(--dark-invert-on-tertiary-active);
+  --invert-on-tertiary-disabled: var(--dark-invert-on-tertiary-disabled);
+  --invert-on-highlight-default: var(--dark-invert-on-highlight-default);
+  --invert-on-highlight-hover: var(--dark-invert-on-highlight-hover);
+  --invert-on-highlight-active: var(--dark-invert-on-highlight-active);
+  --invert-on-highlight-disabled: var(--dark-invert-on-highlight-disabled);
+  --invert-on-accent-default: var(--dark-invert-on-accent-default);
+  --invert-on-accent-hover: var(--dark-invert-on-accent-hover);
+  --invert-on-accent-active: var(--dark-invert-on-accent-active);
+  --invert-on-accent-disabled: var(--dark-invert-on-accent-disabled);
+  --invert-on-accent-highlight-default: var(
+    --dark-invert-on-accent-highlight-default
+  );
+  --invert-on-accent-highlight-hover: var(
+    --dark-invert-on-accent-highlight-hover
+  );
+  --invert-on-accent-highlight-active: var(
+    --dark-invert-on-accent-highlight-active
+  );
+  --invert-on-accent-highlight-disabled: var(
+    --dark-invert-on-accent-highlight-disabled
+  );
+  --invert-on-error-default: var(--dark-invert-on-error-default);
+  --invert-on-error-hover: var(--dark-invert-on-error-hover);
+  --invert-on-error-active: var(--dark-invert-on-error-active);
+  --invert-on-error-disabled: var(--dark-invert-on-error-disabled);
+  --invert-on-border-primary-default: var(
+    --dark-invert-on-border-primary-default
+  );
+  --invert-on-border-primary-hover: var(--dark-invert-on-border-primary-hover);
+  --invert-on-border-primary-active: var(
+    --dark-invert-on-border-primary-active
+  );
+  --invert-on-border-primary-disabled: var(
+    --dark-invert-on-border-primary-disabled
+  );
+  --invert-on-border-secondary-default: var(
+    --dark-invert-on-border-secondary-default
+  );
+  --invert-on-border-secondary-hover: var(
+    --dark-invert-on-border-secondary-hover
+  );
+  --invert-on-border-secondary-active: var(
+    --dark-invert-on-border-secondary-active
+  );
+  --invert-on-border-secondary-disabled: var(
+    --dark-invert-on-border-secondary-disabled
+  );
+  --not-white: #fcfcfc;
+  --shadow-black: #0d0d0e;
+  --raven: #19191c;
+  --midnight: #232325;
+  --charcoal: #2e2d32;
+  --bluestone: #3c3c4a;
+  --storm: #6a6a73;
+  --prata: #a6a6ac;
+  --pewter: #c9c9d1;
+  --platinum: #e5e4e2;
+  --winter: #e7e7ee;
+  --snow: #f4f4f7;
+  --translucent: #fcfcfc70;
+  --arara-300: #82ffd8;
+  --arara-400: #6affc8;
+  --arara-500: #09f097;
+  --arara-600: #00bc68;
+  --arara-700: #008a3c;
+  --arara-500-rgb: 9, 240, 151;
+  --hot-300: #fcc9c9;
+  --hot-400: #ff8982;
+  --hot-500: #f55;
+  --hot-600: #cf162c;
+  --hot-700: #8c0004;
+  --ouro: #dfbd69;
+  --ouro-rgb: 223, 189, 105;
+  --azul: #3373e0;
+  --roxa: #b4277b;
+  --marrom: #8b4513;
+  --prata-100: #fff;
+  --prata-99: #fcfcfc;
+  --prata-98: #f9f9fc;
+  --prata-95: #f4f4f7;
+  --prata-93: #ededf4;
+  --prata-90: #e7e7ee;
+  --prata-85: #dadae2;
+  --prata-80: #c9c9d1;
+  --prata-78: #babac2;
+  --prata-75: #afafb6;
+  --prata-70: #a6a6ac;
+  --prata-65: #9f9ba0;
+  --prata-60: #938f94;
+  --prata-55: #76767f;
+  --prata-50: #6a6a73;
+  --prata-40: #605d62;
+  --prata-35: #545156;
+  --prata-30: #48464a;
+  --prata-25: #3d3b3e;
+  --prata-20: #313033;
+  --prata-15: #272629;
+  --prata-10: #19191c;
+  --prata-2: #0d0d0e;
+  --prata-0: #000;
+  --arara-100: #fff;
+  --arara-99: #effcf8;
+  --arara-98: #d2ffee;
+  --arara-95: #a2ffdc;
+  --arara-90: #73ffca;
+  --arara-85: #1afea8;
+  --arara-80: #09f097;
+  --arara-75: #0bca80;
+  --arara-70: #00bc68;
+  --arara-60: #09b572;
+  --arara-50: #089e64;
+  --arara-45: #078654;
+  --arara-42: #07784c;
+  --arara-40: #076c45;
+  --arara-35: #055e3c;
+  --arara-30: #045133;
+  --arara-25: #03452b;
+  --arara-20: #023922;
+  --arara-15: #012d1a;
+  --arara-10: #012111;
+  --arara-5: #00150a;
+  --arara-0: #000;
+  --hot-100: #fff;
+  --hot-99: #fefbff;
+  --hot-98: #fef8f7;
+  --hot-95: #fceeeb;
+  --hot-90: #f9dbd7;
+  --hot-80: #fcc9c9;
+  --hot-70: #ff8982;
+  --hot-60: #f55;
+  --hot-50: #cd463a;
+  --hot-40: #c5162c;
+  --hot-35: #9a211c;
+  --hot-30: #8c0004;
+  --hot-25: #731411;
+  --hot-20: #600f0c;
+  --hot-10: #3b0605;
+  --hot-0: #000;
+  --ouro-100: #fff;
+  --ouro-99: #fefbff;
+  --ouro-98: #fef8f2;
+  --ouro-95: #fcf0d3;
+  --ouro-90: #fae09e;
+  --ouro-80: #dfbd69;
+  --ouro-70: #caab5d;
+  --ouro-60: #a98e4d;
+  --ouro-50: #8a743f;
+  --ouro-40: #746135;
+  --ouro-35: #63532e;
+  --ouro-30: #564828;
+  --ouro-25: #463b23;
+  --ouro-20: #3c2f09;
+  --ouro-15: #2f2506;
+  --ouro-10: #231a04;
+  --ouro-5: #171002;
+  --ouro-0: #000;
+  --base-transition: 0.3s ease-in-out;
+  --long-transition: 0.6s ease-in-out;
+  --header-height: 58px;
+  --gap-width: 0.5rem;
+  --fg-color: var(--bluestone);
+  --skeleton-color: var(--platinum);
+  --block-padding: var(--vt-padding) var(--hz-padding);
+  --skeleton-bg-color: var(--low-accent-default);
+  --header-bg-color: var(--shadow-black);
+  --header-fg-color: var(--not-white);
+  --page-h: calc(100vh - var(--header-height));
+  --z-base: 1;
+  --z-component: 10;
+  --z-header: 1000;
+  --z-tray-bg: 104;
+  --z-tray: 2000;
+  --z-modal: 1001;
+  --z-modal-content: 1002;
+  --z-component-frontdrop: 998;
+  --z-component-container: 999;
+  --modal-dim: 0.5;
+  --modal-bg-color: #000;
+  --modal-animation: 0.2s;
+  --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-back: cubic-bezier(0.18, 0.89, 0.32, 1.27);
+  position: relative;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --surface-base: var(--light-surface-base);
+    --surface-low: var(--light-surface-low);
+    --surface-high: var(--light-surface-high);
+    --surface-invert: var(--light-surface-invert);
+    --base-primary-default: var(--light-base-primary-default);
+    --base-primary-hover: var(--light-base-primary-hover);
+    --base-primary-active: var(--light-base-primary-active);
+    --base-primary-disabled: var(--light-base-primary-disabled);
+    --base-secondary-default: var(--light-base-secondary-default);
+    --base-secondary-hover: var(--light-base-secondary-hover);
+    --base-secondary-active: var(--light-base-secondary-active);
+    --base-secondary-disabled: var(--light-base-secondary-disabled);
+    --base-tertiary-default: var(--light-base-tertiary-default);
+    --base-tertiary-hover: var(--light-base-tertiary-hover);
+    --base-tertiary-active: var(--light-base-tertiary-active);
+    --base-tertiary-disabled: var(--light-base-tertiary-disabled);
+    --base-highlight-default: var(--light-base-highlight-default);
+    --base-highlight-hover: var(--light-base-highlight-hover);
+    --base-highlight-active: var(--light-base-highlight-active);
+    --base-highlight-disabled: var(--light-base-highlight-disabled);
+    --base-accent-default: var(--light-base-accent-default);
+    --base-accent-hover: var(--light-base-accent-hover);
+    --base-accent-active: var(--light-base-accent-active);
+    --base-accent-disabled: var(--light-base-accent-disabled);
+    --base-accent-highlight-default: var(--light-base-accent-highlight-default);
+    --base-accent-highlight-hover: var(--light-base-accent-highlight-hover);
+    --base-accent-highlight-active: var(--light-base-accent-highlight-active);
+    --base-accent-highlight-disabled: var(
+      --light-base-accent-highlight-disabled
+    );
+    --base-error-default: var(--light-base-error-default);
+    --base-error-hover: var(--light-base-error-hover);
+    --base-error-active: var(--light-base-error-active);
+    --base-error-disabled: var(--light-base-error-disabled);
+    --base-border-primary-default: var(--light-base-border-primary-default);
+    --base-border-primary-hover: var(--light-base-border-primary-hover);
+    --base-border-primary-active: var(--light-base-border-primary-active);
+    --base-border-primary-disabled: var(--light-base-border-primary-disabled);
+    --base-border-secondary-default: var(--light-base-border-secondary-default);
+    --base-border-secondary-hover: var(--light-base-border-secondary-hover);
+    --base-border-secondary-active: var(--light-base-border-secondary-active);
+    --base-border-secondary-disabled: var(
+      --light-base-border-secondary-disabled
+    );
+    --low-primary-default: var(--light-low-primary-default);
+    --low-primary-hover: var(--light-low-primary-hover);
+    --low-primary-active: var(--light-low-primary-active);
+    --low-primary-disabled: var(--light-low-primary-disabled);
+    --low-secondary-default: var(--light-low-secondary-default);
+    --low-secondary-hover: var(--light-low-secondary-hover);
+    --low-secondary-active: var(--light-low-secondary-active);
+    --low-secondary-disabled: var(--light-low-secondary-disabled);
+    --low-tertiary-default: var(--light-low-tertiary-default);
+    --low-tertiary-hover: var(--light-low-tertiary-hover);
+    --low-tertiary-active: var(--light-low-tertiary-active);
+    --low-tertiary-disabled: var(--light-low-tertiary-disabled);
+    --low-highlight-default: var(--light-low-highlight-default);
+    --low-highlight-hover: var(--light-low-highlight-hover);
+    --low-highlight-active: var(--light-low-highlight-active);
+    --low-highlight-disabled: var(--light-low-highlight-disabled);
+    --low-accent-default: var(--light-low-accent-default);
+    --low-accent-hover: var(--light-low-accent-hover);
+    --low-accent-active: var(--light-low-accent-active);
+    --low-accent-disabled: var(--light-low-accent-disabled);
+    --low-accent-highlight-default: var(--light-low-accent-highlight-default);
+    --low-accent-highlight-hover: var(--light-low-accent-highlight-hover);
+    --low-accent-highlight-active: var(--light-low-accent-highlight-active);
+    --low-accent-highlight-disabled: var(--light-low-accent-highlight-disabled);
+    --low-error-default: var(--light-low-error-default);
+    --low-error-hover: var(--light-low-error-hover);
+    --low-error-active: var(--light-low-error-active);
+    --low-error-disabled: var(--light-low-error-disabled);
+    --low-border-primary-default: var(--light-low-border-primary-default);
+    --low-border-primary-hover: var(--light-low-border-primary-hover);
+    --low-border-primary-active: var(--light-low-border-primary-active);
+    --low-border-primary-disabled: var(--light-low-border-primary-disabled);
+    --low-border-secondary-default: var(--light-low-border-secondary-default);
+    --low-border-secondary-hover: var(--light-low-border-secondary-hover);
+    --low-border-secondary-active: var(--light-low-border-secondary-active);
+    --low-border-secondary-disabled: var(--light-low-border-secondary-disabled);
+    --high-primary-default: var(--light-high-primary-default);
+    --high-primary-hover: var(--light-high-primary-hover);
+    --high-primary-active: var(--light-high-primary-active);
+    --high-primary-disabled: var(--light-high-primary-disabled);
+    --high-secondary-default: var(--light-high-secondary-default);
+    --high-secondary-hover: var(--light-high-secondary-hover);
+    --high-secondary-active: var(--light-high-secondary-active);
+    --high-secondary-disabled: var(--light-high-secondary-disabled);
+    --high-tertiary-default: var(--light-high-tertiary-default);
+    --high-tertiary-hover: var(--light-high-tertiary-hover);
+    --high-tertiary-active: var(--light-high-tertiary-active);
+    --high-tertiary-disabled: var(--light-high-tertiary-disabled);
+    --high-highlight-default: var(--light-high-highlight-default);
+    --high-highlight-hover: var(--light-high-highlight-hover);
+    --high-highlight-active: var(--light-high-highlight-active);
+    --high-highlight-disabled: var(--light-high-highlight-disabled);
+    --high-accent-default: var(--light-high-accent-default);
+    --high-accent-hover: var(--light-high-accent-hover);
+    --high-accent-active: var(--light-high-accent-active);
+    --high-accent-disabled: var(--light-high-accent-disabled);
+    --high-accent-highlight-default: var(--light-high-accent-highlight-default);
+    --high-accent-highlight-hover: var(--light-high-accent-highlight-hover);
+    --high-accent-highlight-active: var(--light-high-accent-highlight-active);
+    --high-accent-highlight-disabled: var(
+      --light-high-accent-highlight-disabled
+    );
+    --high-error-default: var(--light-high-error-default);
+    --high-error-hover: var(--light-high-error-hover);
+    --high-error-active: var(--light-high-error-active);
+    --high-error-disabled: var(--light-high-error-disabled);
+    --high-border-primary-default: var(--light-high-border-primary-default);
+    --high-border-primary-hover: var(--light-high-border-primary-hover);
+    --high-border-primary-active: var(--light-high-border-primary-active);
+    --high-border-primary-disabled: var(--light-high-border-primary-disabled);
+    --high-border-secondary-default: var(--light-high-border-secondary-default);
+    --high-border-secondary-hover: var(--light-high-border-secondary-hover);
+    --high-border-secondary-active: var(--light-high-border-secondary-active);
+    --high-border-secondary-disabled: var(
+      --light-high-border-secondary-disabled
+    );
+    --invert-primary-default: var(--light-invert-primary-default);
+    --invert-primary-hover: var(--light-invert-primary-hover);
+    --invert-primary-active: var(--light-invert-primary-active);
+    --invert-primary-disabled: var(--light-invert-primary-disabled);
+    --invert-secondary-default: var(--light-invert-secondary-default);
+    --invert-secondary-hover: var(--light-invert-secondary-hover);
+    --invert-secondary-active: var(--light-invert-secondary-active);
+    --invert-secondary-disabled: var(--light-invert-secondary-disabled);
+    --invert-tertiary-default: var(--light-invert-tertiary-default);
+    --invert-tertiary-hover: var(--light-invert-tertiary-hover);
+    --invert-tertiary-active: var(--light-invert-tertiary-active);
+    --invert-tertiary-disabled: var(--light-invert-tertiary-disabled);
+    --invert-highlight-default: var(--light-invert-highlight-default);
+    --invert-highlight-hover: var(--light-invert-highlight-hover);
+    --invert-highlight-active: var(--light-invert-highlight-active);
+    --invert-highlight-disabled: var(--light-invert-highlight-disabled);
+    --invert-accent-default: var(--light-invert-accent-default);
+    --invert-accent-hover: var(--light-invert-accent-hover);
+    --invert-accent-active: var(--light-invert-accent-active);
+    --invert-accent-disabled: var(--light-invert-accent-disabled);
+    --invert-accent-highlight-default: var(
+      --light-invert-accent-highlight-default
+    );
+    --invert-accent-highlight-hover: var(--light-invert-accent-highlight-hover);
+    --invert-accent-highlight-active: var(
+      --light-invert-accent-highlight-active
+    );
+    --invert-accent-highlight-disabled: var(
+      --light-invert-accent-highlight-disabled
+    );
+    --invert-error-default: var(--light-invert-error-default);
+    --invert-error-hover: var(--light-invert-error-hover);
+    --invert-error-active: var(--light-invert-error-active);
+    --invert-error-disabled: var(--light-invert-error-disabled);
+    --invert-border-primary-default: var(--light-invert-border-primary-default);
+    --invert-border-primary-hover: var(--light-invert-border-primary-hover);
+    --invert-border-primary-active: var(--light-invert-border-primary-active);
+    --invert-border-primary-disabled: var(
+      --light-invert-border-primary-disabled
+    );
+    --invert-border-secondary-default: var(
+      --light-invert-border-secondary-default
+    );
+    --invert-border-secondary-hover: var(--light-invert-border-secondary-hover);
+    --invert-border-secondary-active: var(
+      --light-invert-border-secondary-active
+    );
+    --invert-border-secondary-disabled: var(
+      --light-invert-border-secondary-disabled
+    );
+    --base-on-primary-default: var(--light-base-on-primary-default);
+    --base-on-primary-hover: var(--light-base-on-primary-hover);
+    --base-on-primary-active: var(--light-base-on-primary-active);
+    --base-on-primary-disabled: var(--light-base-on-primary-disabled);
+    --base-on-secondary-default: var(--light-base-on-secondary-default);
+    --base-on-secondary-hover: var(--light-base-on-secondary-hover);
+    --base-on-secondary-active: var(--light-base-on-secondary-active);
+    --base-on-secondary-disabled: var(--light-base-on-secondary-disabled);
+    --base-on-tertiary-default: var(--light-base-on-tertiary-default);
+    --base-on-tertiary-hover: var(--light-base-on-tertiary-hover);
+    --base-on-tertiary-active: var(--light-base-on-tertiary-active);
+    --base-on-tertiary-disabled: var(--light-base-on-tertiary-disabled);
+    --base-on-highlight-default: var(--light-base-on-highlight-default);
+    --base-on-highlight-hover: var(--light-base-on-highlight-hover);
+    --base-on-highlight-active: var(--light-base-on-highlight-active);
+    --base-on-highlight-disabled: var(--light-base-on-highlight-disabled);
+    --base-on-accent-default: var(--light-base-on-accent-default);
+    --base-on-accent-hover: var(--light-base-on-accent-hover);
+    --base-on-accent-active: var(--light-base-on-accent-active);
+    --base-on-accent-disabled: var(--light-base-on-accent-disabled);
+    --base-on-accent-highlight-default: var(
+      --light-base-on-accent-highlight-default
+    );
+    --base-on-accent-highlight-hover: var(
+      --light-base-on-accent-highlight-hover
+    );
+    --base-on-accent-highlight-active: var(
+      --light-base-on-accent-highlight-active
+    );
+    --base-on-accent-highlight-disabled: var(
+      --light-base-on-accent-highlight-disabled
+    );
+    --base-on-error-default: var(--light-base-on-error-default);
+    --base-on-error-hover: var(--light-base-on-error-hover);
+    --base-on-error-active: var(--light-base-on-error-active);
+    --base-on-error-disabled: var(--light-base-on-error-disabled);
+    --base-on-border-primary-default: var(
+      --light-base-on-border-primary-default
+    );
+    --base-on-border-primary-hover: var(--light-base-on-border-primary-hover);
+    --base-on-border-primary-active: var(--light-base-on-border-primary-active);
+    --base-on-border-primary-disabled: var(
+      --light-base-on-border-primary-disabled
+    );
+    --base-on-border-secondary-default: var(
+      --light-base-on-border-secondary-default
+    );
+    --base-on-border-secondary-hover: var(
+      --light-base-on-border-secondary-hover
+    );
+    --base-on-border-secondary-active: var(
+      --light-base-on-border-secondary-active
+    );
+    --base-on-border-secondary-disabled: var(
+      --light-base-on-border-secondary-disabled
+    );
+    --low-on-primary-default: var(--light-low-on-primary-default);
+    --low-on-primary-hover: var(--light-low-on-primary-hover);
+    --low-on-primary-active: var(--light-low-on-primary-active);
+    --low-on-primary-disabled: var(--light-low-on-primary-disabled);
+    --low-on-secondary-default: var(--light-low-on-secondary-default);
+    --low-on-secondary-hover: var(--light-low-on-secondary-hover);
+    --low-on-secondary-active: var(--light-low-on-secondary-active);
+    --low-on-secondary-disabled: var(--light-low-on-secondary-disabled);
+    --low-on-tertiary-default: var(--light-low-on-tertiary-default);
+    --low-on-tertiary-hover: var(--light-low-on-tertiary-hover);
+    --low-on-tertiary-active: var(--light-low-on-tertiary-active);
+    --low-on-tertiary-disabled: var(--light-low-on-tertiary-disabled);
+    --low-on-highlight-default: var(--light-low-on-highlight-default);
+    --low-on-highlight-hover: var(--light-low-on-highlight-hover);
+    --low-on-highlight-active: var(--light-low-on-highlight-active);
+    --low-on-highlight-disabled: var(--light-low-on-highlight-disabled);
+    --low-on-accent-default: var(--light-low-on-accent-default);
+    --low-on-accent-hover: var(--light-low-on-accent-hover);
+    --low-on-accent-active: var(--light-low-on-accent-active);
+    --low-on-accent-disabled: var(--light-low-on-accent-disabled);
+    --low-on-accent-highlight-default: var(
+      --light-low-on-accent-highlight-default
+    );
+    --low-on-accent-highlight-hover: var(--light-low-on-accent-highlight-hover);
+    --low-on-accent-highlight-active: var(
+      --light-low-on-accent-highlight-active
+    );
+    --low-on-accent-highlight-disabled: var(
+      --light-low-on-accent-highlight-disabled
+    );
+    --low-on-error-default: var(--light-low-on-error-default);
+    --low-on-error-hover: var(--light-low-on-error-hover);
+    --low-on-error-active: var(--light-low-on-error-active);
+    --low-on-error-disabled: var(--light-low-on-error-disabled);
+    --low-on-border-primary-default: var(--light-low-on-border-primary-default);
+    --low-on-border-primary-hover: var(--light-low-on-border-primary-hover);
+    --low-on-border-primary-active: var(--light-low-on-border-primary-active);
+    --low-on-border-primary-disabled: var(
+      --light-low-on-border-primary-disabled
+    );
+    --low-on-border-secondary-default: var(
+      --light-low-on-border-secondary-default
+    );
+    --low-on-border-secondary-hover: var(--light-low-on-border-secondary-hover);
+    --low-on-border-secondary-active: var(
+      --light-low-on-border-secondary-active
+    );
+    --low-on-border-secondary-disabled: var(
+      --light-low-on-border-secondary-disabled
+    );
+    --high-on-primary-default: var(--light-high-on-primary-default);
+    --high-on-primary-hover: var(--light-high-on-primary-hover);
+    --high-on-primary-active: var(--light-high-on-primary-active);
+    --high-on-primary-disabled: var(--light-high-on-primary-disabled);
+    --high-on-secondary-default: var(--light-high-on-secondary-default);
+    --high-on-secondary-hover: var(--light-high-on-secondary-hover);
+    --high-on-secondary-active: var(--light-high-on-secondary-active);
+    --high-on-secondary-disabled: var(--light-high-on-secondary-disabled);
+    --high-on-tertiary-default: var(--light-high-on-tertiary-default);
+    --high-on-tertiary-hover: var(--light-high-on-tertiary-hover);
+    --high-on-tertiary-active: var(--light-high-on-tertiary-active);
+    --high-on-tertiary-disabled: var(--light-high-on-tertiary-disabled);
+    --high-on-highlight-default: var(--light-high-on-highlight-default);
+    --high-on-highlight-hover: var(--light-high-on-highlight-hover);
+    --high-on-highlight-active: var(--light-high-on-highlight-active);
+    --high-on-highlight-disabled: var(--light-high-on-highlight-disabled);
+    --high-on-accent-default: var(--light-high-on-accent-default);
+    --high-on-accent-hover: var(--light-high-on-accent-hover);
+    --high-on-accent-active: var(--light-high-on-accent-active);
+    --high-on-accent-disabled: var(--light-high-on-accent-disabled);
+    --high-on-accent-highlight-default: var(
+      --light-high-on-accent-highlight-default
+    );
+    --high-on-accent-highlight-hover: var(
+      --light-high-on-accent-highlight-hover
+    );
+    --high-on-accent-highlight-active: var(
+      --light-high-on-accent-highlight-active
+    );
+    --high-on-accent-highlight-disabled: var(
+      --light-high-on-accent-highlight-disabled
+    );
+    --high-on-error-default: var(--light-high-on-error-default);
+    --high-on-error-hover: var(--light-high-on-error-hover);
+    --high-on-error-active: var(--light-high-on-error-active);
+    --high-on-error-disabled: var(--light-high-on-error-disabled);
+    --high-on-border-primary-default: var(
+      --light-high-on-border-primary-default
+    );
+    --high-on-border-primary-hover: var(--light-high-on-border-primary-hover);
+    --high-on-border-primary-active: var(--light-high-on-border-primary-active);
+    --high-on-border-primary-disabled: var(
+      --light-high-on-border-primary-disabled
+    );
+    --high-on-border-secondary-default: var(
+      --light-high-on-border-secondary-default
+    );
+    --high-on-border-secondary-hover: var(
+      --light-high-on-border-secondary-hover
+    );
+    --high-on-border-secondary-active: var(
+      --light-high-on-border-secondary-active
+    );
+    --high-on-border-secondary-disabled: var(
+      --light-high-on-border-secondary-disabled
+    );
+    --invert-on-primary-default: var(--light-invert-on-primary-default);
+    --invert-on-primary-hover: var(--light-invert-on-primary-hover);
+    --invert-on-primary-active: var(--light-invert-on-primary-active);
+    --invert-on-primary-disabled: var(--light-invert-on-primary-disabled);
+    --invert-on-secondary-default: var(--light-invert-on-secondary-default);
+    --invert-on-secondary-hover: var(--light-invert-on-secondary-hover);
+    --invert-on-secondary-active: var(--light-invert-on-secondary-active);
+    --invert-on-secondary-disabled: var(--light-invert-on-secondary-disabled);
+    --invert-on-tertiary-default: var(--light-invert-on-tertiary-default);
+    --invert-on-tertiary-hover: var(--light-invert-on-tertiary-hover);
+    --invert-on-tertiary-active: var(--light-invert-on-tertiary-active);
+    --invert-on-tertiary-disabled: var(--light-invert-on-tertiary-disabled);
+    --invert-on-highlight-default: var(--light-invert-on-highlight-default);
+    --invert-on-highlight-hover: var(--light-invert-on-highlight-hover);
+    --invert-on-highlight-active: var(--light-invert-on-highlight-active);
+    --invert-on-highlight-disabled: var(--light-invert-on-highlight-disabled);
+    --invert-on-accent-default: var(--light-invert-on-accent-default);
+    --invert-on-accent-hover: var(--light-invert-on-accent-hover);
+    --invert-on-accent-active: var(--light-invert-on-accent-active);
+    --invert-on-accent-disabled: var(--light-invert-on-accent-disabled);
+    --invert-on-accent-highlight-default: var(
+      --light-invert-on-accent-highlight-default
+    );
+    --invert-on-accent-highlight-hover: var(
+      --light-invert-on-accent-highlight-hover
+    );
+    --invert-on-accent-highlight-active: var(
+      --light-invert-on-accent-highlight-active
+    );
+    --invert-on-accent-highlight-disabled: var(
+      --light-invert-on-accent-highlight-disabled
+    );
+    --invert-on-error-default: var(--light-invert-on-error-default);
+    --invert-on-error-hover: var(--light-invert-on-error-hover);
+    --invert-on-error-active: var(--light-invert-on-error-active);
+    --invert-on-error-disabled: var(--light-invert-on-error-disabled);
+    --invert-on-border-primary-default: var(
+      --light-invert-on-border-primary-default
+    );
+    --invert-on-border-primary-hover: var(
+      --light-invert-on-border-primary-hover
+    );
+    --invert-on-border-primary-active: var(
+      --light-invert-on-border-primary-active
+    );
+    --invert-on-border-primary-disabled: var(
+      --light-invert-on-border-primary-disabled
+    );
+    --invert-on-border-secondary-default: var(
+      --light-invert-on-border-secondary-default
+    );
+    --invert-on-border-secondary-hover: var(
+      --light-invert-on-border-secondary-hover
+    );
+    --invert-on-border-secondary-active: var(
+      --light-invert-on-border-secondary-active
+    );
+    --invert-on-border-secondary-disabled: var(
+      --light-invert-on-border-secondary-disabled
+    );
+  }
+}
+
+@media screen and (min-width: 1192px) {
+  :root {
+    --cols-n: 4;
+    --page-width: 1216px;
+    --footer-height: 10rem;
+    --hz-padding: 4rem;
+    --vt-padding: 5rem;
+    letter-spacing: 0.025rem;
+  }
+}
+
+@media screen and (max-width: 1192px) {
+  :root {
+    --cols-n: 3;
+    --footer-height: 5rem;
+    --hz-padding: 2rem;
+    --vt-padding: 4rem;
+    letter-spacing: 0.025rem;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  :root {
+    --cols-n: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    --footer-height: 5rem;
+    --hz-padding: 1rem;
+    --vt-padding: 2rem;
+  }
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+  --surface-base: var(--dark-surface-base);
+  --surface-low: var(--dark-surface-low);
+  --surface-high: var(--dark-surface-high);
+  --surface-invert: var(--dark-surface-invert);
+  --base-primary-default: var(--dark-base-primary-default);
+  --base-primary-hover: var(--dark-base-primary-hover);
+  --base-primary-active: var(--dark-base-primary-active);
+  --base-primary-disabled: var(--dark-base-primary-disabled);
+  --base-secondary-default: var(--dark-base-secondary-default);
+  --base-secondary-hover: var(--dark-base-secondary-hover);
+  --base-secondary-active: var(--dark-base-secondary-active);
+  --base-secondary-disabled: var(--dark-base-secondary-disabled);
+  --base-tertiary-default: var(--dark-base-tertiary-default);
+  --base-tertiary-hover: var(--dark-base-tertiary-hover);
+  --base-tertiary-active: var(--dark-base-tertiary-active);
+  --base-tertiary-disabled: var(--dark-base-tertiary-disabled);
+  --base-highlight-default: var(--dark-base-highlight-default);
+  --base-highlight-hover: var(--dark-base-highlight-hover);
+  --base-highlight-active: var(--dark-base-highlight-active);
+  --base-highlight-disabled: var(--dark-base-highlight-disabled);
+  --base-accent-default: var(--dark-base-accent-default);
+  --base-accent-hover: var(--dark-base-accent-hover);
+  --base-accent-active: var(--dark-base-accent-active);
+  --base-accent-disabled: var(--dark-base-accent-disabled);
+  --base-accent-highlight-default: var(--dark-base-accent-highlight-default);
+  --base-accent-highlight-hover: var(--dark-base-accent-highlight-hover);
+  --base-accent-highlight-active: var(--dark-base-accent-highlight-active);
+  --base-accent-highlight-disabled: var(--dark-base-accent-highlight-disabled);
+  --base-error-default: var(--dark-base-error-default);
+  --base-error-hover: var(--dark-base-error-hover);
+  --base-error-active: var(--dark-base-error-active);
+  --base-error-disabled: var(--dark-base-error-disabled);
+  --base-border-primary-default: var(--dark-base-border-primary-default);
+  --base-border-primary-hover: var(--dark-base-border-primary-hover);
+  --base-border-primary-active: var(--dark-base-border-primary-active);
+  --base-border-primary-disabled: var(--dark-base-border-primary-disabled);
+  --base-border-secondary-default: var(--dark-base-border-secondary-default);
+  --base-border-secondary-hover: var(--dark-base-border-secondary-hover);
+  --base-border-secondary-active: var(--dark-base-border-secondary-active);
+  --base-border-secondary-disabled: var(--dark-base-border-secondary-disabled);
+  --low-primary-default: var(--dark-low-primary-default);
+  --low-primary-hover: var(--dark-low-primary-hover);
+  --low-primary-active: var(--dark-low-primary-active);
+  --low-primary-disabled: var(--dark-low-primary-disabled);
+  --low-secondary-default: var(--dark-low-secondary-default);
+  --low-secondary-hover: var(--dark-low-secondary-hover);
+  --low-secondary-active: var(--dark-low-secondary-active);
+  --low-secondary-disabled: var(--dark-low-secondary-disabled);
+  --low-tertiary-default: var(--dark-low-tertiary-default);
+  --low-tertiary-hover: var(--dark-low-tertiary-hover);
+  --low-tertiary-active: var(--dark-low-tertiary-active);
+  --low-tertiary-disabled: var(--dark-low-tertiary-disabled);
+  --low-highlight-default: var(--dark-low-highlight-default);
+  --low-highlight-hover: var(--dark-low-highlight-hover);
+  --low-highlight-active: var(--dark-low-highlight-active);
+  --low-highlight-disabled: var(--dark-low-highlight-disabled);
+  --low-accent-default: var(--dark-low-accent-default);
+  --low-accent-hover: var(--dark-low-accent-hover);
+  --low-accent-active: var(--dark-low-accent-active);
+  --low-accent-disabled: var(--dark-low-accent-disabled);
+  --low-accent-highlight-default: var(--dark-low-accent-highlight-default);
+  --low-accent-highlight-hover: var(--dark-low-accent-highlight-hover);
+  --low-accent-highlight-active: var(--dark-low-accent-highlight-active);
+  --low-accent-highlight-disabled: var(--dark-low-accent-highlight-disabled);
+  --low-error-default: var(--dark-low-error-default);
+  --low-error-hover: var(--dark-low-error-hover);
+  --low-error-active: var(--dark-low-error-active);
+  --low-error-disabled: var(--dark-low-error-disabled);
+  --low-border-primary-default: var(--dark-low-border-primary-default);
+  --low-border-primary-hover: var(--dark-low-border-primary-hover);
+  --low-border-primary-active: var(--dark-low-border-primary-active);
+  --low-border-primary-disabled: var(--dark-low-border-primary-disabled);
+  --low-border-secondary-default: var(--dark-low-border-secondary-default);
+  --low-border-secondary-hover: var(--dark-low-border-secondary-hover);
+  --low-border-secondary-active: var(--dark-low-border-secondary-active);
+  --low-border-secondary-disabled: var(--dark-low-border-secondary-disabled);
+  --high-primary-default: var(--dark-high-primary-default);
+  --high-primary-hover: var(--dark-high-primary-hover);
+  --high-primary-active: var(--dark-high-primary-active);
+  --high-primary-disabled: var(--dark-high-primary-disabled);
+  --high-secondary-default: var(--dark-high-secondary-default);
+  --high-secondary-hover: var(--dark-high-secondary-hover);
+  --high-secondary-active: var(--dark-high-secondary-active);
+  --high-secondary-disabled: var(--dark-high-secondary-disabled);
+  --high-tertiary-default: var(--dark-high-tertiary-default);
+  --high-tertiary-hover: var(--dark-high-tertiary-hover);
+  --high-tertiary-active: var(--dark-high-tertiary-active);
+  --high-tertiary-disabled: var(--dark-high-tertiary-disabled);
+  --high-highlight-default: var(--dark-high-highlight-default);
+  --high-highlight-hover: var(--dark-high-highlight-hover);
+  --high-highlight-active: var(--dark-high-highlight-active);
+  --high-highlight-disabled: var(--dark-high-highlight-disabled);
+  --high-accent-default: var(--dark-high-accent-default);
+  --high-accent-hover: var(--dark-high-accent-hover);
+  --high-accent-active: var(--dark-high-accent-active);
+  --high-accent-disabled: var(--dark-high-accent-disabled);
+  --high-accent-highlight-default: var(--dark-high-accent-highlight-default);
+  --high-accent-highlight-hover: var(--dark-high-accent-highlight-hover);
+  --high-accent-highlight-active: var(--dark-high-accent-highlight-active);
+  --high-accent-highlight-disabled: var(--dark-high-accent-highlight-disabled);
+  --high-error-default: var(--dark-high-error-default);
+  --high-error-hover: var(--dark-high-error-hover);
+  --high-error-active: var(--dark-high-error-active);
+  --high-error-disabled: var(--dark-high-error-disabled);
+  --high-border-primary-default: var(--dark-high-border-primary-default);
+  --high-border-primary-hover: var(--dark-high-border-primary-hover);
+  --high-border-primary-active: var(--dark-high-border-primary-active);
+  --high-border-primary-disabled: var(--dark-high-border-primary-disabled);
+  --high-border-secondary-default: var(--dark-high-border-secondary-default);
+  --high-border-secondary-hover: var(--dark-high-border-secondary-hover);
+  --high-border-secondary-active: var(--dark-high-border-secondary-active);
+  --high-border-secondary-disabled: var(--dark-high-border-secondary-disabled);
+  --invert-primary-default: var(--dark-invert-primary-default);
+  --invert-primary-hover: var(--dark-invert-primary-hover);
+  --invert-primary-active: var(--dark-invert-primary-active);
+  --invert-primary-disabled: var(--dark-invert-primary-disabled);
+  --invert-secondary-default: var(--dark-invert-secondary-default);
+  --invert-secondary-hover: var(--dark-invert-secondary-hover);
+  --invert-secondary-active: var(--dark-invert-secondary-active);
+  --invert-secondary-disabled: var(--dark-invert-secondary-disabled);
+  --invert-tertiary-default: var(--dark-invert-tertiary-default);
+  --invert-tertiary-hover: var(--dark-invert-tertiary-hover);
+  --invert-tertiary-active: var(--dark-invert-tertiary-active);
+  --invert-tertiary-disabled: var(--dark-invert-tertiary-disabled);
+  --invert-highlight-default: var(--dark-invert-highlight-default);
+  --invert-highlight-hover: var(--dark-invert-highlight-hover);
+  --invert-highlight-active: var(--dark-invert-highlight-active);
+  --invert-highlight-disabled: var(--dark-invert-highlight-disabled);
+  --invert-accent-default: var(--dark-invert-accent-default);
+  --invert-accent-hover: var(--dark-invert-accent-hover);
+  --invert-accent-active: var(--dark-invert-accent-active);
+  --invert-accent-disabled: var(--dark-invert-accent-disabled);
+  --invert-accent-highlight-default: var(
+    --dark-invert-accent-highlight-default
+  );
+  --invert-accent-highlight-hover: var(--dark-invert-accent-highlight-hover);
+  --invert-accent-highlight-active: var(--dark-invert-accent-highlight-active);
+  --invert-accent-highlight-disabled: var(
+    --dark-invert-accent-highlight-disabled
+  );
+  --invert-error-default: var(--dark-invert-error-default);
+  --invert-error-hover: var(--dark-invert-error-hover);
+  --invert-error-active: var(--dark-invert-error-active);
+  --invert-error-disabled: var(--dark-invert-error-disabled);
+  --invert-border-primary-default: var(--dark-invert-border-primary-default);
+  --invert-border-primary-hover: var(--dark-invert-border-primary-hover);
+  --invert-border-primary-active: var(--dark-invert-border-primary-active);
+  --invert-border-primary-disabled: var(--dark-invert-border-primary-disabled);
+  --invert-border-secondary-default: var(
+    --dark-invert-border-secondary-default
+  );
+  --invert-border-secondary-hover: var(--dark-invert-border-secondary-hover);
+  --invert-border-secondary-active: var(--dark-invert-border-secondary-active);
+  --invert-border-secondary-disabled: var(
+    --dark-invert-border-secondary-disabled
+  );
+  --base-on-primary-default: var(--dark-base-on-primary-default);
+  --base-on-primary-hover: var(--dark-base-on-primary-hover);
+  --base-on-primary-active: var(--dark-base-on-primary-active);
+  --base-on-primary-disabled: var(--dark-base-on-primary-disabled);
+  --base-on-secondary-default: var(--dark-base-on-secondary-default);
+  --base-on-secondary-hover: var(--dark-base-on-secondary-hover);
+  --base-on-secondary-active: var(--dark-base-on-secondary-active);
+  --base-on-secondary-disabled: var(--dark-base-on-secondary-disabled);
+  --base-on-tertiary-default: var(--dark-base-on-tertiary-default);
+  --base-on-tertiary-hover: var(--dark-base-on-tertiary-hover);
+  --base-on-tertiary-active: var(--dark-base-on-tertiary-active);
+  --base-on-tertiary-disabled: var(--dark-base-on-tertiary-disabled);
+  --base-on-highlight-default: var(--dark-base-on-highlight-default);
+  --base-on-highlight-hover: var(--dark-base-on-highlight-hover);
+  --base-on-highlight-active: var(--dark-base-on-highlight-active);
+  --base-on-highlight-disabled: var(--dark-base-on-highlight-disabled);
+  --base-on-accent-default: var(--dark-base-on-accent-default);
+  --base-on-accent-hover: var(--dark-base-on-accent-hover);
+  --base-on-accent-active: var(--dark-base-on-accent-active);
+  --base-on-accent-disabled: var(--dark-base-on-accent-disabled);
+  --base-on-accent-highlight-default: var(
+    --dark-base-on-accent-highlight-default
+  );
+  --base-on-accent-highlight-hover: var(--dark-base-on-accent-highlight-hover);
+  --base-on-accent-highlight-active: var(
+    --dark-base-on-accent-highlight-active
+  );
+  --base-on-accent-highlight-disabled: var(
+    --dark-base-on-accent-highlight-disabled
+  );
+  --base-on-error-default: var(--dark-base-on-error-default);
+  --base-on-error-hover: var(--dark-base-on-error-hover);
+  --base-on-error-active: var(--dark-base-on-error-active);
+  --base-on-error-disabled: var(--dark-base-on-error-disabled);
+  --base-on-border-primary-default: var(--dark-base-on-border-primary-default);
+  --base-on-border-primary-hover: var(--dark-base-on-border-primary-hover);
+  --base-on-border-primary-active: var(--dark-base-on-border-primary-active);
+  --base-on-border-primary-disabled: var(
+    --dark-base-on-border-primary-disabled
+  );
+  --base-on-border-secondary-default: var(
+    --dark-base-on-border-secondary-default
+  );
+  --base-on-border-secondary-hover: var(--dark-base-on-border-secondary-hover);
+  --base-on-border-secondary-active: var(
+    --dark-base-on-border-secondary-active
+  );
+  --base-on-border-secondary-disabled: var(
+    --dark-base-on-border-secondary-disabled
+  );
+  --low-on-primary-default: var(--dark-low-on-primary-default);
+  --low-on-primary-hover: var(--dark-low-on-primary-hover);
+  --low-on-primary-active: var(--dark-low-on-primary-active);
+  --low-on-primary-disabled: var(--dark-low-on-primary-disabled);
+  --low-on-secondary-default: var(--dark-low-on-secondary-default);
+  --low-on-secondary-hover: var(--dark-low-on-secondary-hover);
+  --low-on-secondary-active: var(--dark-low-on-secondary-active);
+  --low-on-secondary-disabled: var(--dark-low-on-secondary-disabled);
+  --low-on-tertiary-default: var(--dark-low-on-tertiary-default);
+  --low-on-tertiary-hover: var(--dark-low-on-tertiary-hover);
+  --low-on-tertiary-active: var(--dark-low-on-tertiary-active);
+  --low-on-tertiary-disabled: var(--dark-low-on-tertiary-disabled);
+  --low-on-highlight-default: var(--dark-low-on-highlight-default);
+  --low-on-highlight-hover: var(--dark-low-on-highlight-hover);
+  --low-on-highlight-active: var(--dark-low-on-highlight-active);
+  --low-on-highlight-disabled: var(--dark-low-on-highlight-disabled);
+  --low-on-accent-default: var(--dark-low-on-accent-default);
+  --low-on-accent-hover: var(--dark-low-on-accent-hover);
+  --low-on-accent-active: var(--dark-low-on-accent-active);
+  --low-on-accent-disabled: var(--dark-low-on-accent-disabled);
+  --low-on-accent-highlight-default: var(
+    --dark-low-on-accent-highlight-default
+  );
+  --low-on-accent-highlight-hover: var(--dark-low-on-accent-highlight-hover);
+  --low-on-accent-highlight-active: var(--dark-low-on-accent-highlight-active);
+  --low-on-accent-highlight-disabled: var(
+    --dark-low-on-accent-highlight-disabled
+  );
+  --low-on-error-default: var(--dark-low-on-error-default);
+  --low-on-error-hover: var(--dark-low-on-error-hover);
+  --low-on-error-active: var(--dark-low-on-error-active);
+  --low-on-error-disabled: var(--dark-low-on-error-disabled);
+  --low-on-border-primary-default: var(--dark-low-on-border-primary-default);
+  --low-on-border-primary-hover: var(--dark-low-on-border-primary-hover);
+  --low-on-border-primary-active: var(--dark-low-on-border-primary-active);
+  --low-on-border-primary-disabled: var(--dark-low-on-border-primary-disabled);
+  --low-on-border-secondary-default: var(
+    --dark-low-on-border-secondary-default
+  );
+  --low-on-border-secondary-hover: var(--dark-low-on-border-secondary-hover);
+  --low-on-border-secondary-active: var(--dark-low-on-border-secondary-active);
+  --low-on-border-secondary-disabled: var(
+    --dark-low-on-border-secondary-disabled
+  );
+  --high-on-primary-default: var(--dark-high-on-primary-default);
+  --high-on-primary-hover: var(--dark-high-on-primary-hover);
+  --high-on-primary-active: var(--dark-high-on-primary-active);
+  --high-on-primary-disabled: var(--dark-high-on-primary-disabled);
+  --high-on-secondary-default: var(--dark-high-on-secondary-default);
+  --high-on-secondary-hover: var(--dark-high-on-secondary-hover);
+  --high-on-secondary-active: var(--dark-high-on-secondary-active);
+  --high-on-secondary-disabled: var(--dark-high-on-secondary-disabled);
+  --high-on-tertiary-default: var(--dark-high-on-tertiary-default);
+  --high-on-tertiary-hover: var(--dark-high-on-tertiary-hover);
+  --high-on-tertiary-active: var(--dark-high-on-tertiary-active);
+  --high-on-tertiary-disabled: var(--dark-high-on-tertiary-disabled);
+  --high-on-highlight-default: var(--dark-high-on-highlight-default);
+  --high-on-highlight-hover: var(--dark-high-on-highlight-hover);
+  --high-on-highlight-active: var(--dark-high-on-highlight-active);
+  --high-on-highlight-disabled: var(--dark-high-on-highlight-disabled);
+  --high-on-accent-default: var(--dark-high-on-accent-default);
+  --high-on-accent-hover: var(--dark-high-on-accent-hover);
+  --high-on-accent-active: var(--dark-high-on-accent-active);
+  --high-on-accent-disabled: var(--dark-high-on-accent-disabled);
+  --high-on-accent-highlight-default: var(
+    --dark-high-on-accent-highlight-default
+  );
+  --high-on-accent-highlight-hover: var(--dark-high-on-accent-highlight-hover);
+  --high-on-accent-highlight-active: var(
+    --dark-high-on-accent-highlight-active
+  );
+  --high-on-accent-highlight-disabled: var(
+    --dark-high-on-accent-highlight-disabled
+  );
+  --high-on-error-default: var(--dark-high-on-error-default);
+  --high-on-error-hover: var(--dark-high-on-error-hover);
+  --high-on-error-active: var(--dark-high-on-error-active);
+  --high-on-error-disabled: var(--dark-high-on-error-disabled);
+  --high-on-border-primary-default: var(--dark-high-on-border-primary-default);
+  --high-on-border-primary-hover: var(--dark-high-on-border-primary-hover);
+  --high-on-border-primary-active: var(--dark-high-on-border-primary-active);
+  --high-on-border-primary-disabled: var(
+    --dark-high-on-border-primary-disabled
+  );
+  --high-on-border-secondary-default: var(
+    --dark-high-on-border-secondary-default
+  );
+  --high-on-border-secondary-hover: var(--dark-high-on-border-secondary-hover);
+  --high-on-border-secondary-active: var(
+    --dark-high-on-border-secondary-active
+  );
+  --high-on-border-secondary-disabled: var(
+    --dark-high-on-border-secondary-disabled
+  );
+  --invert-on-primary-default: var(--dark-invert-on-primary-default);
+  --invert-on-primary-hover: var(--dark-invert-on-primary-hover);
+  --invert-on-primary-active: var(--dark-invert-on-primary-active);
+  --invert-on-primary-disabled: var(--dark-invert-on-primary-disabled);
+  --invert-on-secondary-default: var(--dark-invert-on-secondary-default);
+  --invert-on-secondary-hover: var(--dark-invert-on-secondary-hover);
+  --invert-on-secondary-active: var(--dark-invert-on-secondary-active);
+  --invert-on-secondary-disabled: var(--dark-invert-on-secondary-disabled);
+  --invert-on-tertiary-default: var(--dark-invert-on-tertiary-default);
+  --invert-on-tertiary-hover: var(--dark-invert-on-tertiary-hover);
+  --invert-on-tertiary-active: var(--dark-invert-on-tertiary-active);
+  --invert-on-tertiary-disabled: var(--dark-invert-on-tertiary-disabled);
+  --invert-on-highlight-default: var(--dark-invert-on-highlight-default);
+  --invert-on-highlight-hover: var(--dark-invert-on-highlight-hover);
+  --invert-on-highlight-active: var(--dark-invert-on-highlight-active);
+  --invert-on-highlight-disabled: var(--dark-invert-on-highlight-disabled);
+  --invert-on-accent-default: var(--dark-invert-on-accent-default);
+  --invert-on-accent-hover: var(--dark-invert-on-accent-hover);
+  --invert-on-accent-active: var(--dark-invert-on-accent-active);
+  --invert-on-accent-disabled: var(--dark-invert-on-accent-disabled);
+  --invert-on-accent-highlight-default: var(
+    --dark-invert-on-accent-highlight-default
+  );
+  --invert-on-accent-highlight-hover: var(
+    --dark-invert-on-accent-highlight-hover
+  );
+  --invert-on-accent-highlight-active: var(
+    --dark-invert-on-accent-highlight-active
+  );
+  --invert-on-accent-highlight-disabled: var(
+    --dark-invert-on-accent-highlight-disabled
+  );
+  --invert-on-error-default: var(--dark-invert-on-error-default);
+  --invert-on-error-hover: var(--dark-invert-on-error-hover);
+  --invert-on-error-active: var(--dark-invert-on-error-active);
+  --invert-on-error-disabled: var(--dark-invert-on-error-disabled);
+  --invert-on-border-primary-default: var(
+    --dark-invert-on-border-primary-default
+  );
+  --invert-on-border-primary-hover: var(--dark-invert-on-border-primary-hover);
+  --invert-on-border-primary-active: var(
+    --dark-invert-on-border-primary-active
+  );
+  --invert-on-border-primary-disabled: var(
+    --dark-invert-on-border-primary-disabled
+  );
+  --invert-on-border-secondary-default: var(
+    --dark-invert-on-border-secondary-default
+  );
+  --invert-on-border-secondary-hover: var(
+    --dark-invert-on-border-secondary-hover
+  );
+  --invert-on-border-secondary-active: var(
+    --dark-invert-on-border-secondary-active
+  );
+  --invert-on-border-secondary-disabled: var(
+    --dark-invert-on-border-secondary-disabled
+  );
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+  --surface-base: var(--light-surface-base);
+  --surface-low: var(--light-surface-low);
+  --surface-high: var(--light-surface-high);
+  --surface-invert: var(--light-surface-invert);
+  --base-primary-default: var(--light-base-primary-default);
+  --base-primary-hover: var(--light-base-primary-hover);
+  --base-primary-active: var(--light-base-primary-active);
+  --base-primary-disabled: var(--light-base-primary-disabled);
+  --base-secondary-default: var(--light-base-secondary-default);
+  --base-secondary-hover: var(--light-base-secondary-hover);
+  --base-secondary-active: var(--light-base-secondary-active);
+  --base-secondary-disabled: var(--light-base-secondary-disabled);
+  --base-tertiary-default: var(--light-base-tertiary-default);
+  --base-tertiary-hover: var(--light-base-tertiary-hover);
+  --base-tertiary-active: var(--light-base-tertiary-active);
+  --base-tertiary-disabled: var(--light-base-tertiary-disabled);
+  --base-highlight-default: var(--light-base-highlight-default);
+  --base-highlight-hover: var(--light-base-highlight-hover);
+  --base-highlight-active: var(--light-base-highlight-active);
+  --base-highlight-disabled: var(--light-base-highlight-disabled);
+  --base-accent-default: var(--light-base-accent-default);
+  --base-accent-hover: var(--light-base-accent-hover);
+  --base-accent-active: var(--light-base-accent-active);
+  --base-accent-disabled: var(--light-base-accent-disabled);
+  --base-accent-highlight-default: var(--light-base-accent-highlight-default);
+  --base-accent-highlight-hover: var(--light-base-accent-highlight-hover);
+  --base-accent-highlight-active: var(--light-base-accent-highlight-active);
+  --base-accent-highlight-disabled: var(--light-base-accent-highlight-disabled);
+  --base-error-default: var(--light-base-error-default);
+  --base-error-hover: var(--light-base-error-hover);
+  --base-error-active: var(--light-base-error-active);
+  --base-error-disabled: var(--light-base-error-disabled);
+  --base-border-primary-default: var(--light-base-border-primary-default);
+  --base-border-primary-hover: var(--light-base-border-primary-hover);
+  --base-border-primary-active: var(--light-base-border-primary-active);
+  --base-border-primary-disabled: var(--light-base-border-primary-disabled);
+  --base-border-secondary-default: var(--light-base-border-secondary-default);
+  --base-border-secondary-hover: var(--light-base-border-secondary-hover);
+  --base-border-secondary-active: var(--light-base-border-secondary-active);
+  --base-border-secondary-disabled: var(--light-base-border-secondary-disabled);
+  --low-primary-default: var(--light-low-primary-default);
+  --low-primary-hover: var(--light-low-primary-hover);
+  --low-primary-active: var(--light-low-primary-active);
+  --low-primary-disabled: var(--light-low-primary-disabled);
+  --low-secondary-default: var(--light-low-secondary-default);
+  --low-secondary-hover: var(--light-low-secondary-hover);
+  --low-secondary-active: var(--light-low-secondary-active);
+  --low-secondary-disabled: var(--light-low-secondary-disabled);
+  --low-tertiary-default: var(--light-low-tertiary-default);
+  --low-tertiary-hover: var(--light-low-tertiary-hover);
+  --low-tertiary-active: var(--light-low-tertiary-active);
+  --low-tertiary-disabled: var(--light-low-tertiary-disabled);
+  --low-highlight-default: var(--light-low-highlight-default);
+  --low-highlight-hover: var(--light-low-highlight-hover);
+  --low-highlight-active: var(--light-low-highlight-active);
+  --low-highlight-disabled: var(--light-low-highlight-disabled);
+  --low-accent-default: var(--light-low-accent-default);
+  --low-accent-hover: var(--light-low-accent-hover);
+  --low-accent-active: var(--light-low-accent-active);
+  --low-accent-disabled: var(--light-low-accent-disabled);
+  --low-accent-highlight-default: var(--light-low-accent-highlight-default);
+  --low-accent-highlight-hover: var(--light-low-accent-highlight-hover);
+  --low-accent-highlight-active: var(--light-low-accent-highlight-active);
+  --low-accent-highlight-disabled: var(--light-low-accent-highlight-disabled);
+  --low-error-default: var(--light-low-error-default);
+  --low-error-hover: var(--light-low-error-hover);
+  --low-error-active: var(--light-low-error-active);
+  --low-error-disabled: var(--light-low-error-disabled);
+  --low-border-primary-default: var(--light-low-border-primary-default);
+  --low-border-primary-hover: var(--light-low-border-primary-hover);
+  --low-border-primary-active: var(--light-low-border-primary-active);
+  --low-border-primary-disabled: var(--light-low-border-primary-disabled);
+  --low-border-secondary-default: var(--light-low-border-secondary-default);
+  --low-border-secondary-hover: var(--light-low-border-secondary-hover);
+  --low-border-secondary-active: var(--light-low-border-secondary-active);
+  --low-border-secondary-disabled: var(--light-low-border-secondary-disabled);
+  --high-primary-default: var(--light-high-primary-default);
+  --high-primary-hover: var(--light-high-primary-hover);
+  --high-primary-active: var(--light-high-primary-active);
+  --high-primary-disabled: var(--light-high-primary-disabled);
+  --high-secondary-default: var(--light-high-secondary-default);
+  --high-secondary-hover: var(--light-high-secondary-hover);
+  --high-secondary-active: var(--light-high-secondary-active);
+  --high-secondary-disabled: var(--light-high-secondary-disabled);
+  --high-tertiary-default: var(--light-high-tertiary-default);
+  --high-tertiary-hover: var(--light-high-tertiary-hover);
+  --high-tertiary-active: var(--light-high-tertiary-active);
+  --high-tertiary-disabled: var(--light-high-tertiary-disabled);
+  --high-highlight-default: var(--light-high-highlight-default);
+  --high-highlight-hover: var(--light-high-highlight-hover);
+  --high-highlight-active: var(--light-high-highlight-active);
+  --high-highlight-disabled: var(--light-high-highlight-disabled);
+  --high-accent-default: var(--light-high-accent-default);
+  --high-accent-hover: var(--light-high-accent-hover);
+  --high-accent-active: var(--light-high-accent-active);
+  --high-accent-disabled: var(--light-high-accent-disabled);
+  --high-accent-highlight-default: var(--light-high-accent-highlight-default);
+  --high-accent-highlight-hover: var(--light-high-accent-highlight-hover);
+  --high-accent-highlight-active: var(--light-high-accent-highlight-active);
+  --high-accent-highlight-disabled: var(--light-high-accent-highlight-disabled);
+  --high-error-default: var(--light-high-error-default);
+  --high-error-hover: var(--light-high-error-hover);
+  --high-error-active: var(--light-high-error-active);
+  --high-error-disabled: var(--light-high-error-disabled);
+  --high-border-primary-default: var(--light-high-border-primary-default);
+  --high-border-primary-hover: var(--light-high-border-primary-hover);
+  --high-border-primary-active: var(--light-high-border-primary-active);
+  --high-border-primary-disabled: var(--light-high-border-primary-disabled);
+  --high-border-secondary-default: var(--light-high-border-secondary-default);
+  --high-border-secondary-hover: var(--light-high-border-secondary-hover);
+  --high-border-secondary-active: var(--light-high-border-secondary-active);
+  --high-border-secondary-disabled: var(--light-high-border-secondary-disabled);
+  --invert-primary-default: var(--light-invert-primary-default);
+  --invert-primary-hover: var(--light-invert-primary-hover);
+  --invert-primary-active: var(--light-invert-primary-active);
+  --invert-primary-disabled: var(--light-invert-primary-disabled);
+  --invert-secondary-default: var(--light-invert-secondary-default);
+  --invert-secondary-hover: var(--light-invert-secondary-hover);
+  --invert-secondary-active: var(--light-invert-secondary-active);
+  --invert-secondary-disabled: var(--light-invert-secondary-disabled);
+  --invert-tertiary-default: var(--light-invert-tertiary-default);
+  --invert-tertiary-hover: var(--light-invert-tertiary-hover);
+  --invert-tertiary-active: var(--light-invert-tertiary-active);
+  --invert-tertiary-disabled: var(--light-invert-tertiary-disabled);
+  --invert-highlight-default: var(--light-invert-highlight-default);
+  --invert-highlight-hover: var(--light-invert-highlight-hover);
+  --invert-highlight-active: var(--light-invert-highlight-active);
+  --invert-highlight-disabled: var(--light-invert-highlight-disabled);
+  --invert-accent-default: var(--light-invert-accent-default);
+  --invert-accent-hover: var(--light-invert-accent-hover);
+  --invert-accent-active: var(--light-invert-accent-active);
+  --invert-accent-disabled: var(--light-invert-accent-disabled);
+  --invert-accent-highlight-default: var(
+    --light-invert-accent-highlight-default
+  );
+  --invert-accent-highlight-hover: var(--light-invert-accent-highlight-hover);
+  --invert-accent-highlight-active: var(--light-invert-accent-highlight-active);
+  --invert-accent-highlight-disabled: var(
+    --light-invert-accent-highlight-disabled
+  );
+  --invert-error-default: var(--light-invert-error-default);
+  --invert-error-hover: var(--light-invert-error-hover);
+  --invert-error-active: var(--light-invert-error-active);
+  --invert-error-disabled: var(--light-invert-error-disabled);
+  --invert-border-primary-default: var(--light-invert-border-primary-default);
+  --invert-border-primary-hover: var(--light-invert-border-primary-hover);
+  --invert-border-primary-active: var(--light-invert-border-primary-active);
+  --invert-border-primary-disabled: var(--light-invert-border-primary-disabled);
+  --invert-border-secondary-default: var(
+    --light-invert-border-secondary-default
+  );
+  --invert-border-secondary-hover: var(--light-invert-border-secondary-hover);
+  --invert-border-secondary-active: var(--light-invert-border-secondary-active);
+  --invert-border-secondary-disabled: var(
+    --light-invert-border-secondary-disabled
+  );
+  --base-on-primary-default: var(--light-base-on-primary-default);
+  --base-on-primary-hover: var(--light-base-on-primary-hover);
+  --base-on-primary-active: var(--light-base-on-primary-active);
+  --base-on-primary-disabled: var(--light-base-on-primary-disabled);
+  --base-on-secondary-default: var(--light-base-on-secondary-default);
+  --base-on-secondary-hover: var(--light-base-on-secondary-hover);
+  --base-on-secondary-active: var(--light-base-on-secondary-active);
+  --base-on-secondary-disabled: var(--light-base-on-secondary-disabled);
+  --base-on-tertiary-default: var(--light-base-on-tertiary-default);
+  --base-on-tertiary-hover: var(--light-base-on-tertiary-hover);
+  --base-on-tertiary-active: var(--light-base-on-tertiary-active);
+  --base-on-tertiary-disabled: var(--light-base-on-tertiary-disabled);
+  --base-on-highlight-default: var(--light-base-on-highlight-default);
+  --base-on-highlight-hover: var(--light-base-on-highlight-hover);
+  --base-on-highlight-active: var(--light-base-on-highlight-active);
+  --base-on-highlight-disabled: var(--light-base-on-highlight-disabled);
+  --base-on-accent-default: var(--light-base-on-accent-default);
+  --base-on-accent-hover: var(--light-base-on-accent-hover);
+  --base-on-accent-active: var(--light-base-on-accent-active);
+  --base-on-accent-disabled: var(--light-base-on-accent-disabled);
+  --base-on-accent-highlight-default: var(
+    --light-base-on-accent-highlight-default
+  );
+  --base-on-accent-highlight-hover: var(--light-base-on-accent-highlight-hover);
+  --base-on-accent-highlight-active: var(
+    --light-base-on-accent-highlight-active
+  );
+  --base-on-accent-highlight-disabled: var(
+    --light-base-on-accent-highlight-disabled
+  );
+  --base-on-error-default: var(--light-base-on-error-default);
+  --base-on-error-hover: var(--light-base-on-error-hover);
+  --base-on-error-active: var(--light-base-on-error-active);
+  --base-on-error-disabled: var(--light-base-on-error-disabled);
+  --base-on-border-primary-default: var(--light-base-on-border-primary-default);
+  --base-on-border-primary-hover: var(--light-base-on-border-primary-hover);
+  --base-on-border-primary-active: var(--light-base-on-border-primary-active);
+  --base-on-border-primary-disabled: var(
+    --light-base-on-border-primary-disabled
+  );
+  --base-on-border-secondary-default: var(
+    --light-base-on-border-secondary-default
+  );
+  --base-on-border-secondary-hover: var(--light-base-on-border-secondary-hover);
+  --base-on-border-secondary-active: var(
+    --light-base-on-border-secondary-active
+  );
+  --base-on-border-secondary-disabled: var(
+    --light-base-on-border-secondary-disabled
+  );
+  --low-on-primary-default: var(--light-low-on-primary-default);
+  --low-on-primary-hover: var(--light-low-on-primary-hover);
+  --low-on-primary-active: var(--light-low-on-primary-active);
+  --low-on-primary-disabled: var(--light-low-on-primary-disabled);
+  --low-on-secondary-default: var(--light-low-on-secondary-default);
+  --low-on-secondary-hover: var(--light-low-on-secondary-hover);
+  --low-on-secondary-active: var(--light-low-on-secondary-active);
+  --low-on-secondary-disabled: var(--light-low-on-secondary-disabled);
+  --low-on-tertiary-default: var(--light-low-on-tertiary-default);
+  --low-on-tertiary-hover: var(--light-low-on-tertiary-hover);
+  --low-on-tertiary-active: var(--light-low-on-tertiary-active);
+  --low-on-tertiary-disabled: var(--light-low-on-tertiary-disabled);
+  --low-on-highlight-default: var(--light-low-on-highlight-default);
+  --low-on-highlight-hover: var(--light-low-on-highlight-hover);
+  --low-on-highlight-active: var(--light-low-on-highlight-active);
+  --low-on-highlight-disabled: var(--light-low-on-highlight-disabled);
+  --low-on-accent-default: var(--light-low-on-accent-default);
+  --low-on-accent-hover: var(--light-low-on-accent-hover);
+  --low-on-accent-active: var(--light-low-on-accent-active);
+  --low-on-accent-disabled: var(--light-low-on-accent-disabled);
+  --low-on-accent-highlight-default: var(
+    --light-low-on-accent-highlight-default
+  );
+  --low-on-accent-highlight-hover: var(--light-low-on-accent-highlight-hover);
+  --low-on-accent-highlight-active: var(--light-low-on-accent-highlight-active);
+  --low-on-accent-highlight-disabled: var(
+    --light-low-on-accent-highlight-disabled
+  );
+  --low-on-error-default: var(--light-low-on-error-default);
+  --low-on-error-hover: var(--light-low-on-error-hover);
+  --low-on-error-active: var(--light-low-on-error-active);
+  --low-on-error-disabled: var(--light-low-on-error-disabled);
+  --low-on-border-primary-default: var(--light-low-on-border-primary-default);
+  --low-on-border-primary-hover: var(--light-low-on-border-primary-hover);
+  --low-on-border-primary-active: var(--light-low-on-border-primary-active);
+  --low-on-border-primary-disabled: var(--light-low-on-border-primary-disabled);
+  --low-on-border-secondary-default: var(
+    --light-low-on-border-secondary-default
+  );
+  --low-on-border-secondary-hover: var(--light-low-on-border-secondary-hover);
+  --low-on-border-secondary-active: var(--light-low-on-border-secondary-active);
+  --low-on-border-secondary-disabled: var(
+    --light-low-on-border-secondary-disabled
+  );
+  --high-on-primary-default: var(--light-high-on-primary-default);
+  --high-on-primary-hover: var(--light-high-on-primary-hover);
+  --high-on-primary-active: var(--light-high-on-primary-active);
+  --high-on-primary-disabled: var(--light-high-on-primary-disabled);
+  --high-on-secondary-default: var(--light-high-on-secondary-default);
+  --high-on-secondary-hover: var(--light-high-on-secondary-hover);
+  --high-on-secondary-active: var(--light-high-on-secondary-active);
+  --high-on-secondary-disabled: var(--light-high-on-secondary-disabled);
+  --high-on-tertiary-default: var(--light-high-on-tertiary-default);
+  --high-on-tertiary-hover: var(--light-high-on-tertiary-hover);
+  --high-on-tertiary-active: var(--light-high-on-tertiary-active);
+  --high-on-tertiary-disabled: var(--light-high-on-tertiary-disabled);
+  --high-on-highlight-default: var(--light-high-on-highlight-default);
+  --high-on-highlight-hover: var(--light-high-on-highlight-hover);
+  --high-on-highlight-active: var(--light-high-on-highlight-active);
+  --high-on-highlight-disabled: var(--light-high-on-highlight-disabled);
+  --high-on-accent-default: var(--light-high-on-accent-default);
+  --high-on-accent-hover: var(--light-high-on-accent-hover);
+  --high-on-accent-active: var(--light-high-on-accent-active);
+  --high-on-accent-disabled: var(--light-high-on-accent-disabled);
+  --high-on-accent-highlight-default: var(
+    --light-high-on-accent-highlight-default
+  );
+  --high-on-accent-highlight-hover: var(--light-high-on-accent-highlight-hover);
+  --high-on-accent-highlight-active: var(
+    --light-high-on-accent-highlight-active
+  );
+  --high-on-accent-highlight-disabled: var(
+    --light-high-on-accent-highlight-disabled
+  );
+  --high-on-error-default: var(--light-high-on-error-default);
+  --high-on-error-hover: var(--light-high-on-error-hover);
+  --high-on-error-active: var(--light-high-on-error-active);
+  --high-on-error-disabled: var(--light-high-on-error-disabled);
+  --high-on-border-primary-default: var(--light-high-on-border-primary-default);
+  --high-on-border-primary-hover: var(--light-high-on-border-primary-hover);
+  --high-on-border-primary-active: var(--light-high-on-border-primary-active);
+  --high-on-border-primary-disabled: var(
+    --light-high-on-border-primary-disabled
+  );
+  --high-on-border-secondary-default: var(
+    --light-high-on-border-secondary-default
+  );
+  --high-on-border-secondary-hover: var(--light-high-on-border-secondary-hover);
+  --high-on-border-secondary-active: var(
+    --light-high-on-border-secondary-active
+  );
+  --high-on-border-secondary-disabled: var(
+    --light-high-on-border-secondary-disabled
+  );
+  --invert-on-primary-default: var(--light-invert-on-primary-default);
+  --invert-on-primary-hover: var(--light-invert-on-primary-hover);
+  --invert-on-primary-active: var(--light-invert-on-primary-active);
+  --invert-on-primary-disabled: var(--light-invert-on-primary-disabled);
+  --invert-on-secondary-default: var(--light-invert-on-secondary-default);
+  --invert-on-secondary-hover: var(--light-invert-on-secondary-hover);
+  --invert-on-secondary-active: var(--light-invert-on-secondary-active);
+  --invert-on-secondary-disabled: var(--light-invert-on-secondary-disabled);
+  --invert-on-tertiary-default: var(--light-invert-on-tertiary-default);
+  --invert-on-tertiary-hover: var(--light-invert-on-tertiary-hover);
+  --invert-on-tertiary-active: var(--light-invert-on-tertiary-active);
+  --invert-on-tertiary-disabled: var(--light-invert-on-tertiary-disabled);
+  --invert-on-highlight-default: var(--light-invert-on-highlight-default);
+  --invert-on-highlight-hover: var(--light-invert-on-highlight-hover);
+  --invert-on-highlight-active: var(--light-invert-on-highlight-active);
+  --invert-on-highlight-disabled: var(--light-invert-on-highlight-disabled);
+  --invert-on-accent-default: var(--light-invert-on-accent-default);
+  --invert-on-accent-hover: var(--light-invert-on-accent-hover);
+  --invert-on-accent-active: var(--light-invert-on-accent-active);
+  --invert-on-accent-disabled: var(--light-invert-on-accent-disabled);
+  --invert-on-accent-highlight-default: var(
+    --light-invert-on-accent-highlight-default
+  );
+  --invert-on-accent-highlight-hover: var(
+    --light-invert-on-accent-highlight-hover
+  );
+  --invert-on-accent-highlight-active: var(
+    --light-invert-on-accent-highlight-active
+  );
+  --invert-on-accent-highlight-disabled: var(
+    --light-invert-on-accent-highlight-disabled
+  );
+  --invert-on-error-default: var(--light-invert-on-error-default);
+  --invert-on-error-hover: var(--light-invert-on-error-hover);
+  --invert-on-error-active: var(--light-invert-on-error-active);
+  --invert-on-error-disabled: var(--light-invert-on-error-disabled);
+  --invert-on-border-primary-default: var(
+    --light-invert-on-border-primary-default
+  );
+  --invert-on-border-primary-hover: var(--light-invert-on-border-primary-hover);
+  --invert-on-border-primary-active: var(
+    --light-invert-on-border-primary-active
+  );
+  --invert-on-border-primary-disabled: var(
+    --light-invert-on-border-primary-disabled
+  );
+  --invert-on-border-secondary-default: var(
+    --light-invert-on-border-secondary-default
+  );
+  --invert-on-border-secondary-hover: var(
+    --light-invert-on-border-secondary-hover
+  );
+  --invert-on-border-secondary-active: var(
+    --light-invert-on-border-secondary-active
+  );
+  --invert-on-border-secondary-disabled: var(
+    --light-invert-on-border-secondary-disabled
+  );
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body,
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: Px Grotesk;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  letter-spacing: -0.025rem;
+  word-spacing: -0.025rem;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-text-size-adjust: none;
+  overscroll-behavior-y: contain;
+  transition: var(--base-transition);
+  background-color: var(--surface-base);
+  color: var(--base-primary-default);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--base-transition);
+  text-underline-offset: 4px;
+}
+
+a:active,
+a:link,
+a:visited {
+  color: var(--base-primary-default);
+}
+
+a:hover {
+  color: var(--base-secondary-default);
+  cursor: pointer;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+h1[data-layout="h2"],
+h1[styling="h1"],
+h2[data-layout="h2"],
+h2[styling="h1"],
+h3[data-layout="h2"],
+h3[styling="h1"],
+h4[data-layout="h2"],
+h4[styling="h1"],
+h5[data-layout="h2"],
+h5[styling="h1"],
+h6[data-layout="h2"],
+h6[styling="h1"],
+p[data-layout="h2"],
+p[styling="h1"] {
+  font-weight: 700;
+  font-size: 6rem;
+  line-height: 105%;
+  letter-spacing: -0.12rem;
+  word-spacing: -0.12rem;
+  margin: 0;
+  font-family: Px Grotesk;
+}
+
+@media screen and (max-width: 1192px) {
+  h1[data-layout="h2"],
+  h1[styling="h1"],
+  h2[data-layout="h2"],
+  h2[styling="h1"],
+  h3[data-layout="h2"],
+  h3[styling="h1"],
+  h4[data-layout="h2"],
+  h4[styling="h1"],
+  h5[data-layout="h2"],
+  h5[styling="h1"],
+  h6[data-layout="h2"],
+  h6[styling="h1"],
+  p[data-layout="h2"],
+  p[styling="h1"] {
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 110%;
+    letter-spacing: -0.075rem;
+    word-spacing: -0.075rem;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  h1[data-layout="h2"],
+  h1[styling="h1"],
+  h2[data-layout="h2"],
+  h2[styling="h1"],
+  h3[data-layout="h2"],
+  h3[styling="h1"],
+  h4[data-layout="h2"],
+  h4[styling="h1"],
+  h5[data-layout="h2"],
+  h5[styling="h1"],
+  h6[data-layout="h2"],
+  h6[styling="h1"],
+  p[data-layout="h2"],
+  p[styling="h1"] {
+    font-weight: 700;
+    font-size: 3.125rem;
+    line-height: 90%;
+    letter-spacing: -0.034375rem;
+    word-spacing: -0.034375rem;
+    margin: 0;
+  }
+}
+
+h1[data-layout="h2"],
+h1[styling="h2"],
+h2[data-layout="h2"],
+h2[styling="h2"],
+h3[data-layout="h2"],
+h3[styling="h2"],
+h4[data-layout="h2"],
+h4[styling="h2"],
+h5[data-layout="h2"],
+h5[styling="h2"],
+h6[data-layout="h2"],
+h6[styling="h2"],
+p[data-layout="h2"],
+p[styling="h2"] {
+  font-weight: 700;
+  font-size: 3.75rem;
+  line-height: 110%;
+  letter-spacing: -0.075rem;
+  word-spacing: -0.075rem;
+  margin: 0;
+  font-family: Px Grotesk;
+}
+
+@media screen and (max-width: 1192px) {
+  h1[data-layout="h2"],
+  h1[styling="h2"],
+  h2[data-layout="h2"],
+  h2[styling="h2"],
+  h3[data-layout="h2"],
+  h3[styling="h2"],
+  h4[data-layout="h2"],
+  h4[styling="h2"],
+  h5[data-layout="h2"],
+  h5[styling="h2"],
+  h6[data-layout="h2"],
+  h6[styling="h2"],
+  p[data-layout="h2"],
+  p[styling="h2"] {
+    font-weight: 700;
+    font-size: 3.125rem;
+    line-height: 110%;
+    letter-spacing: -0.0625rem;
+    word-spacing: -0.0625rem;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  h1[data-layout="h2"],
+  h1[styling="h2"],
+  h2[data-layout="h2"],
+  h2[styling="h2"],
+  h3[data-layout="h2"],
+  h3[styling="h2"],
+  h4[data-layout="h2"],
+  h4[styling="h2"],
+  h5[data-layout="h2"],
+  h5[styling="h2"],
+  h6[data-layout="h2"],
+  h6[styling="h2"],
+  p[data-layout="h2"],
+  p[styling="h2"] {
+    font-weight: 700;
+    font-size: 2.125rem;
+    line-height: 110%;
+    letter-spacing: -0.0425rem;
+    word-spacing: -0.0425rem;
+    margin: 0;
+  }
+}
+
+h1[data-layout="h3"],
+h1[styling="h3"],
+h2[data-layout="h3"],
+h2[styling="h3"],
+h3[data-layout="h3"],
+h3[styling="h3"],
+h4[data-layout="h3"],
+h4[styling="h3"],
+h5[data-layout="h3"],
+h5[styling="h3"],
+h6[data-layout="h3"],
+h6[styling="h3"],
+p[data-layout="h3"],
+p[styling="h3"] {
+  font-weight: 700;
+  font-size: 3.125rem;
+  line-height: 110%;
+  letter-spacing: -0.0625rem;
+  word-spacing: -0.0625rem;
+  margin: 0;
+  font-family: Px Grotesk;
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  h1[data-layout="h3"],
+  h1[styling="h3"],
+  h2[data-layout="h3"],
+  h2[styling="h3"],
+  h3[data-layout="h3"],
+  h3[styling="h3"],
+  h4[data-layout="h3"],
+  h4[styling="h3"],
+  h5[data-layout="h3"],
+  h5[styling="h3"],
+  h6[data-layout="h3"],
+  h6[styling="h3"],
+  p[data-layout="h3"],
+  p[styling="h3"] {
+    font-weight: 700;
+    font-size: 2.125rem;
+    line-height: 110%;
+    letter-spacing: -0.0425rem;
+    word-spacing: -0.0425rem;
+    margin: 0;
+  }
+}
+
+h1[data-layout="h4"],
+h1[styling="h4"],
+h2[data-layout="h4"],
+h2[styling="h4"],
+h3[data-layout="h4"],
+h3[styling="h4"],
+h4[data-layout="h4"],
+h4[styling="h4"],
+h5[data-layout="h4"],
+h5[styling="h4"],
+h6[data-layout="h4"],
+h6[styling="h4"],
+p[data-layout="h4"],
+p[styling="h4"] {
+  font-weight: 700;
+  font-size: 2.125rem;
+  line-height: 110%;
+  letter-spacing: -0.0425rem;
+  word-spacing: -0.0425rem;
+  margin: 0;
+  font-family: Px Grotesk;
+}
+
+@media screen and (max-width: 1192px) {
+  h1[data-layout="h4"],
+  h1[styling="h4"],
+  h2[data-layout="h4"],
+  h2[styling="h4"],
+  h3[data-layout="h4"],
+  h3[styling="h4"],
+  h4[data-layout="h4"],
+  h4[styling="h4"],
+  h5[data-layout="h4"],
+  h5[styling="h4"],
+  h6[data-layout="h4"],
+  h6[styling="h4"],
+  p[data-layout="h4"],
+  p[styling="h4"] {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 117%;
+    letter-spacing: -0.03rem;
+    word-spacing: -0.03rem;
+    margin: 0;
+  }
+}
+
+h1[data-layout="h5"],
+h1[styling="h5"],
+h2[data-layout="h5"],
+h2[styling="h5"],
+h3[data-layout="h5"],
+h3[styling="h5"],
+h4[data-layout="h5"],
+h4[styling="h5"],
+h5[data-layout="h5"],
+h5[styling="h5"],
+h6[data-layout="h5"],
+h6[styling="h5"],
+p[data-layout="h5"],
+p[styling="h5"] {
+  font-family: Px Grotesk;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 117%;
+  letter-spacing: -0.03rem;
+  word-spacing: -0.03rem;
+  margin: 0;
+}
+
+h1[data-layout="h6"],
+h1[styling="h6"],
+h2[data-layout="h6"],
+h2[styling="h6"],
+h3[data-layout="h6"],
+h3[styling="h6"],
+h4[data-layout="h6"],
+h4[styling="h6"],
+h5[data-layout="h6"],
+h5[styling="h6"],
+h6[data-layout="h6"],
+h6[styling="h6"],
+p[data-layout="h6"],
+p[styling="h6"] {
+  font-family: Px Grotesk;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 120%;
+  letter-spacing: -0.01375rem;
+  word-spacing: -0.01375rem;
+  margin: 0;
+}
+
+h1[data-layout="h7"],
+h1[styling="h7"],
+h2[data-layout="h7"],
+h2[styling="h7"],
+h3[data-layout="h7"],
+h3[styling="h7"],
+h4[data-layout="h7"],
+h4[styling="h7"],
+h5[data-layout="h7"],
+h5[styling="h7"],
+h6[data-layout="h7"],
+h6[styling="h7"],
+p[data-layout="h7"],
+p[styling="h7"] {
+  font-family: Px Grotesk;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 130%;
+  letter-spacing: -0.01rem;
+  word-spacing: -0.01rem;
+  margin: 0;
+}
+
+h1[data-layout*="h8"],
+h1[styling="h8"],
+h2[data-layout*="h8"],
+h2[styling="h8"],
+h3[data-layout*="h8"],
+h3[styling="h8"],
+h4[data-layout*="h8"],
+h4[styling="h8"],
+h5[data-layout*="h8"],
+h5[styling="h8"],
+h6[data-layout*="h8"],
+h6[styling="h8"],
+p[data-layout*="h8"],
+p[styling="h8"] {
+  font-family: Px Grotesk;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  letter-spacing: -0.00875rem;
+  word-spacing: -0.00875rem;
+  margin: 0;
+}
+
+h1[data-layout="h9"],
+h1[styling="h9"],
+h2[data-layout="h9"],
+h2[styling="h9"],
+h3[data-layout="h9"],
+h3[styling="h9"],
+h4[data-layout="h9"],
+h4[styling="h9"],
+h5[data-layout="h9"],
+h5[styling="h9"],
+h6[data-layout="h9"],
+h6[styling="h9"],
+p[data-layout="h9"],
+p[styling="h9"] {
+  font-family: Px Grotesk;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 140%;
+  letter-spacing: 0;
+  word-spacing: 0;
+  margin: 0;
+}
+
+h1[data-layout="body"],
+h1[styling="body"],
+h2[data-layout="body"],
+h2[styling="body"],
+h3[data-layout="body"],
+h3[styling="body"],
+h4[data-layout="body"],
+h4[styling="body"],
+h5[data-layout="body"],
+h5[styling="body"],
+h6[data-layout="body"],
+h6[styling="body"],
+p[data-layout="body"],
+p[styling="body"] {
+  font-family: Px Grotesk;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  letter-spacing: -0.025rem;
+  word-spacing: -0.025rem;
+  margin: 0;
+}
+
+h1[styling="link"],
+h2[styling="link"],
+h3[styling="link"],
+h4[styling="link"],
+h5[styling="link"],
+h6[styling="link"],
+p[styling="link"] {
+  color: var(--base-secondary-default);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: var(--base-transition);
+  cursor: pointer;
+}
+
+h1[styling="link"]:hover,
+h2[styling="link"]:hover,
+h3[styling="link"]:hover,
+h4[styling="link"]:hover,
+h5[styling="link"]:hover,
+h6[styling="link"]:hover,
+p[styling="link"]:hover {
+  color: var(--base-highlight-default);
+}

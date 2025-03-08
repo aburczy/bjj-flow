@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans;
+  font-family: "Px Grotesk", sans-serif;
 }
