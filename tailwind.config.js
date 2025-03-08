@@ -11,7 +11,7 @@ module.exports = {
         light: "#FFFFFF",
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+        sans: ["Px Grotesk", "sans-serif"],
       },
     },
   },
